@@ -11,6 +11,8 @@ scripts:
   main:
     desc: Runs main script
     cmd: main.ts
+    allow:
+      - net
 
   server:
     desc: Starts local server
