@@ -38,8 +38,8 @@ const getPanel = (body: Element, index: number): Partial<Panel> => {
   return { title, students, href };
 };
 
-const main = async () => {
-  const res = await ky(BU_URL);
+const getPage = async (url: string) => {
+  const res = await ky(url);
   const html = await getHtmlUtf8(res);
   const dom = new DOMParser().parseFromString(html, "text/html");
   if (!dom) {
@@ -55,7 +55,13 @@ const main = async () => {
     return getPanel(body, index);
   });
 
-  console.log(JSON.stringify(panels, null, 2));
+  return panels;
+};
+
+const main = async () => {
+  const panels = await getPage(_JA_URL_FIRST);
+
+  console.log(panels.map((p) => JSON.stringify(p)));
 };
 
 main();
