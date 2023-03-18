@@ -1,6 +1,8 @@
 {
   "imports": {
     "server": "https://deno.land/std@0.114.0/http/server.ts",
+    "ky": "https://cdn.skypack.dev/ky?dts",
+    "dom": "https://deno.land/x/deno_dom/deno-dom-wasm.ts",
     "/consts/": "./consts/",
     "/types/": "./types/",
     "/utils/": "./utils/"
