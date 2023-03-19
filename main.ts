@@ -28,11 +28,13 @@ type Panel = {
 };
 
 const getPanel = (body: Element, index: number): Partial<Panel> => {
+  const rgn = index + 1;
+
   const title = body.querySelector(`h2#content_1_${index}`)?.textContent;
   const students = [
-    ...body.querySelectorAll(`#rgn_description${index + 1} > p > a`),
+    ...body.querySelectorAll(`#rgn_description${rgn} > p > a`),
   ].map((node) => node.textContent);
-  const href = body.querySelector(`#rgn_content${index + 1} > blockquote > a`)
+  const href = body.querySelector(`#rgn_content${rgn} > blockquote > a`)
     ?.getAttribute("href") ?? undefined;
 
   return { title, students, href };
