@@ -50,11 +50,16 @@ const getPage = async (url: string) => {
     return getPanel(body, index);
   });
 
-  return panels;
+  const nextHref = body.querySelector("li.navi_right > a")?.getAttribute(
+    "href",
+  ) ?? "";
+  console.log(new URL(nextHref, BASE_URL).href);
+
+  return { panels };
 };
 
 const main = async () => {
-  const panels = await getPage(_JA_URL_FIRST);
+  const { panels } = await getPage(JA_URL_FIRST);
 
   console.log(panels.map((p) => JSON.stringify(p)));
 };
