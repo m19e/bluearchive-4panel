@@ -2,7 +2,7 @@ import ky from "ky";
 import { DOMParser } from "dom";
 import type { Element } from "dom";
 
-import { BASE_URL, JA_URL_FIRST } from "/consts/url.ts";
+import { BASE_URL, JA_URL } from "/consts/url.ts";
 import { sleep } from "/utils/tools.ts";
 
 const getHtmlUtf8 = async (res: Response): Promise<string> => {
@@ -110,7 +110,7 @@ const getMultiPage = async (firstUrl: string) => {
 };
 
 const main = async () => {
-  const panels = await getMultiPage(JA_URL_FIRST);
+  const panels = await getMultiPage(JA_URL);
 
   console.log(panels.map((p) => JSON.stringify(p)));
 };
