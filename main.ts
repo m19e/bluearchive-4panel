@@ -3,6 +3,7 @@ import { DOMParser } from "dom";
 import type { Element } from "dom";
 
 import { BASE_URL, JA_URL_FIRST } from "/consts/url.ts";
+import { sleep } from "/utils/tools.ts";
 
 const getHtmlUtf8 = async (res: Response): Promise<string> => {
   const resBuf = await res.arrayBuffer();
@@ -20,6 +21,30 @@ type Panel = {
   href: string;
 };
 
+const deletedURL =
+  "https://bluearchive.wikiru.jp/?Twitter%E9%80%A3%E8%BC%89/%E3%81%B6%E3%82%8B%E3%83%BC%E3%81%82%E3%83%BC%E3%81%8B%E3%81%84%E3%81%B6%E3%81%A3%EF%BC%81/041%EF%BD%9E050%E8%A9%B1";
+
+const deletedPanel = {
+  title: "第41話 折衷案",
+  students: ["エイミ", "ヒマリ"],
+  href: "https://bluearchive.jp/comics/41/1",
+};
+
+const getPanelCanDeleted = (body: Element, index: number): Partial<Panel> => {
+  if (index === 0) {
+    return deletedPanel;
+  }
+
+  const title = body.querySelector(`h2#content_1_${index}`)?.textContent;
+  const students = [
+    ...body.querySelectorAll(`#rgn_description${index} > p > a`),
+  ].map((node) => node.textContent);
+  const href = body.querySelector(`#rgn_content${index} > blockquote > a`)
+    ?.getAttribute("href") ?? undefined;
+
+  return { title, students, href };
+};
+
 const getPanel = (body: Element, index: number): Partial<Panel> => {
   const rgn = index + 1;
 
@@ -33,7 +58,9 @@ const getPanel = (body: Element, index: number): Partial<Panel> => {
   return { title, students, href };
 };
 
-const getPage = async (url: string) => {
+const getPage = async (
+  url: string,
+) => {
   const res = await ky(url);
   const html = await getHtmlUtf8(res);
   const dom = new DOMParser().parseFromString(html, "text/html");
@@ -45,21 +72,45 @@ const getPage = async (url: string) => {
     throw new Error("#body is not found");
   }
 
+  const isDeleted = url === deletedURL;
+
   const count = body.querySelectorAll("h2").length;
   const panels = [...Array(count)].map((_, index) => {
-    return getPanel(body, index);
+    return isDeleted ? getPanelCanDeleted(body, index) : getPanel(body, index);
   });
 
-  const nextHref = body.querySelector("li.navi_right > a")?.getAttribute(
-    "href",
-  ) ?? "";
-  console.log(new URL(nextHref, BASE_URL).href);
+  const nextAnchor = body.querySelector("li.navi_right > a");
+  if (nextAnchor === null) {
+    console.log("Next page is not found.\nprocess finished.");
+    return { panels, nextUrl: undefined };
+  }
+  const nextHref = nextAnchor.getAttribute("href") ?? "";
+  const nextUrl = new URL(nextHref, BASE_URL).href;
 
-  return { panels };
+  await sleep(1000);
+
+  return { panels, nextUrl };
+};
+
+const getMultiPage = async (firstUrl: string) => {
+  let result = [];
+  let next: string | undefined = undefined;
+
+  const firstPage = await getPage(firstUrl);
+  result = firstPage.panels;
+  next = firstPage.nextUrl;
+
+  while (next) {
+    const { panels, nextUrl } = await getPage(next);
+    result = [...result, ...panels];
+    next = nextUrl;
+  }
+
+  return result;
 };
 
 const main = async () => {
-  const { panels } = await getPage(JA_URL_FIRST);
+  const panels = await getMultiPage(JA_URL_FIRST);
 
   console.log(panels.map((p) => JSON.stringify(p)));
 };
