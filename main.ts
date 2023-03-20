@@ -40,14 +40,14 @@ const parseJaTitle = (original: string) => {
   const text = original.split(mark).join("").trim();
   const [ep, title] = text.split(/\s+/);
   const id = ep.replace(/[^0-9]/g, "");
-  return { id, title };
+  return { id, title: title || "無題" };
 };
 
 const parseEnTitle = (original: string) => {
   const text = original.split(mark).join("").trim();
   const [ep, title] = text.split(/:\s+/);
   const id = ep.replace(/[^0-9]/g, "");
-  return { id, title };
+  return { id, title: title || "No Title" };
 };
 
 const getPanelCanDeleted = (body: Element, index: number): Partial<Panel> => {
