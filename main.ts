@@ -1,8 +1,9 @@
+// deno-lint-ignore-file no-unused-vars
 import ky from "ky";
 import { DOMParser } from "dom";
 import type { Element } from "dom";
 
-import { BASE_URL, JA_URL } from "/consts/url.ts";
+import { AORECO_URL, BASE_URL, EN_URL, JA_URL } from "/consts/url.ts";
 import { sleep } from "/utils/tools.ts";
 
 const getHtmlUtf8 = async (res: Response): Promise<string> => {
@@ -16,6 +17,7 @@ const getHtmlUtf8 = async (res: Response): Promise<string> => {
 };
 
 type Panel = {
+  id: string;
   title: string;
   students: string[];
   href: string;
@@ -28,6 +30,25 @@ const deletedPanel = {
   title: "第41話 折衷案",
   students: ["エイミ", "ヒマリ"],
   href: "https://bluearchive.jp/comics/41/1",
+};
+
+const mark = "†";
+
+const parseJaTitle = (original: string) => {
+  if (original.includes("予告")) {
+    return { id: "0", title: "予告" };
+  }
+  const text = original.split(mark).join("").trim();
+  const [ep, title] = text.split(/\s+/);
+  const id = ep.replace(/[^0-9]/g, "");
+  return { id, title };
+};
+
+const parseEnTitle = (original: string) => {
+  const text = original.split(mark).join("").trim();
+  const [ep, title] = text.split(/:\s+/);
+  const id = ep.replace(/[^0-9]/g, "");
+  return { id, title };
 };
 
 const getPanelCanDeleted = (body: Element, index: number): Partial<Panel> => {
@@ -45,17 +66,22 @@ const getPanelCanDeleted = (body: Element, index: number): Partial<Panel> => {
   return { title, students, href };
 };
 
-const getPanel = (body: Element, index: number): Partial<Panel> => {
+const getPanel = (
+  body: Element,
+  index: number,
+  options: { isEnglish: boolean },
+): Partial<Panel> => {
   const rgn = index + 1;
 
-  const title = body.querySelector(`h2#content_1_${index}`)?.textContent;
+  const h2 = body.querySelector(`h2#content_1_${index}`)?.textContent!;
+  const { id, title } = options.isEnglish ? parseEnTitle(h2) : parseJaTitle(h2);
   const students = [
     ...body.querySelectorAll(`#rgn_description${rgn} > p > a`),
   ].map((node) => node.textContent);
   const href = body.querySelector(`#rgn_content${rgn} > blockquote > a`)
     ?.getAttribute("href") ?? undefined;
 
-  return { title, students, href };
+  return { id, title, students, href };
 };
 
 const getPage = async (
@@ -73,15 +99,17 @@ const getPage = async (
   }
 
   const isDeleted = url === deletedURL;
+  const isEnglish = url.includes("English");
 
   const count = body.querySelectorAll("h2").length;
   const panels = [...Array(count)].map((_, index) => {
-    return isDeleted ? getPanelCanDeleted(body, index) : getPanel(body, index);
+    return isDeleted
+      ? getPanelCanDeleted(body, index)
+      : getPanel(body, index, { isEnglish });
   });
 
   const nextAnchor = body.querySelector("li.navi_right > a");
   if (nextAnchor === null) {
-    console.log("Next page is not found.\nprocess finished.");
     return { panels, nextUrl: undefined };
   }
   const nextHref = nextAnchor.getAttribute("href") ?? "";
@@ -106,13 +134,34 @@ const getMultiPage = async (firstUrl: string) => {
     next = nextUrl;
   }
 
+  console.log("Next page is not found.\nprocess finished.");
+
   return result;
 };
 
 const main = async () => {
-  const panels = await getMultiPage(JA_URL);
+  // const panels = await getMultiPage(AORECO_URL);
+  const ja = await getPage(JA_URL);
+  const ao = await getPage(AORECO_URL);
+  const en = await getPage(EN_URL);
 
-  console.log(panels.map((p) => JSON.stringify(p)));
+  console.log(
+    ja.panels.map(({ id, title, students }) => ({
+      id,
+      title,
+      students: students!.join(),
+    })),
+    en.panels.map(({ id, title, students }) => ({
+      id,
+      title,
+      students: students!.join(),
+    })),
+    ao.panels.map(({ id, title, students }) => ({
+      id,
+      title,
+      students: students!.join(),
+    })),
+  );
 };
 
 main();
