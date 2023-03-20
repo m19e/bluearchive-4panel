@@ -138,29 +138,24 @@ const getMultiPage = async (firstUrl: string) => {
   return result;
 };
 
-const main = async () => {
-  // const panels = await getMultiPage(AORECO_URL);
-  const ja = await getPage(JA_URL);
-  const ao = await getPage(AORECO_URL);
-  const en = await getPage(EN_URL);
+const ja = await getPage(JA_URL);
+const ao = await getPage(AORECO_URL);
+const en = await getPage(EN_URL);
 
-  console.log(
-    ja.panels.map(({ id, title, students }) => ({
-      id,
-      title,
-      students: students!.join(),
-    })),
-    en.panels.map(({ id, title, students }) => ({
-      id,
-      title,
-      students: students!.join(),
-    })),
-    ao.panels.map(({ id, title, students }) => ({
-      id,
-      title,
-      students: students!.join(),
-    })),
-  );
-};
-
-main();
+console.log(
+  ja.panels.map(({ id, title, students }) => ({
+    id,
+    title,
+    students: students!.join(),
+  })),
+  en.panels.map(({ id, title, students }) => ({
+    id,
+    title,
+    students: students!.join(),
+  })),
+  ao.panels.map(({ id, title, students }) => ({
+    id,
+    title,
+    students: students!.join(),
+  })),
+);
