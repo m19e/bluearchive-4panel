@@ -125,6 +125,8 @@ const getMultiPage = async (firstUrl: string) => {
   let result = [];
   let next: string | undefined = undefined;
 
+  console.log("Access to", firstUrl);
+
   const firstPage = await getPage(firstUrl);
   result = firstPage.panels;
   next = firstPage.nextUrl;
@@ -135,7 +137,7 @@ const getMultiPage = async (firstUrl: string) => {
     next = nextUrl;
   }
 
-  console.log("Next page is not found.\nprocess finished.");
+  console.log("Panels count:", result.length);
 
   return result;
 };
