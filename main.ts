@@ -1,4 +1,3 @@
-// deno-lint-ignore-file no-unused-vars
 import ky from "ky";
 import { DOMParser } from "dom";
 import type { Element } from "dom";
