@@ -26,7 +26,8 @@ const deletedURL =
   "https://bluearchive.wikiru.jp/?Twitter%E9%80%A3%E8%BC%89/%E3%81%B6%E3%82%8B%E3%83%BC%E3%81%82%E3%83%BC%E3%81%8B%E3%81%84%E3%81%B6%E3%81%A3%EF%BC%81/041%EF%BD%9E050%E8%A9%B1";
 
 const deletedPanel = {
-  title: "第41話 折衷案",
+  id: "41",
+  title: "折衷案",
   students: ["エイミ", "ヒマリ"],
   href: "https://bluearchive.jp/comics/41/1",
 };
