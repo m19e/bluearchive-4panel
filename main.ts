@@ -138,24 +138,16 @@ const getMultiPage = async (firstUrl: string) => {
   return result;
 };
 
-const ja = await getPage(JA_URL);
-const ao = await getPage(AORECO_URL);
-const en = await getPage(EN_URL);
+const writePanels = async (filepath: string, panels: Partial<Panel>[]) => {
+  const encoder = new TextEncoder();
+  const data = encoder.encode(JSON.stringify(panels));
+  await Deno.writeFile(filepath, data);
+};
 
-console.log(
-  ja.panels.map(({ id, title, students }) => ({
-    id,
-    title,
-    students: students!.join(),
-  })),
-  en.panels.map(({ id, title, students }) => ({
-    id,
-    title,
-    students: students!.join(),
-  })),
-  ao.panels.map(({ id, title, students }) => ({
-    id,
-    title,
-    students: students!.join(),
-  })),
-);
+const jaPanels = await getMultiPage(JA_URL);
+const enPanels = await getMultiPage(EN_URL);
+const aoharuPanels = await getMultiPage(AORECO_URL);
+
+await writePanels("out/ja.json", jaPanels);
+await writePanels("out/en.json", enPanels);
+await writePanels("out/aoharu.json", aoharuPanels);
