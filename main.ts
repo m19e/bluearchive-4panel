@@ -44,8 +44,32 @@ const parseJaTitle = (original: string) => {
   const title = other.join(" ") || "無題";
   return { id, title };
 };
+const en1stPanel = {
+  "id": "10001",
+  "title": "1st Anniversary Special Episode",
+  "students": [
+    "ホシノ",
+    "ノノミ",
+    "シロコ",
+    "セリカ",
+    "アヤネ",
+    "モモイ",
+    "ミドリ",
+    "アリス",
+    "ユズ",
+    "ヒフミ",
+    "ハナコ",
+    "アズサ",
+    "コハル",
+    "アロナ",
+  ],
+  "href": "https://twitter.com/en_bluearchive/status/1590179580379566084",
+};
 
 const parseEnTitle = (original: string) => {
+  if (original.includes("1st Anniversary Special Episode")) {
+    return en1stPanel;
+  }
   const text = original.split(mark).join("").trim();
   const [ep, title] = text.split(/:\s+/);
   const id = ep.replace(/[^0-9]/g, "");
