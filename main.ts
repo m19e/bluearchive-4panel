@@ -39,9 +39,10 @@ const parseJaTitle = (original: string) => {
     return { id: "0", title: "予告" };
   }
   const text = original.split(mark).join("").trim();
-  const [ep, title] = text.split(/\s+/);
+  const [ep, ...other] = text.split(/\s+/);
   const id = ep.replace(/[^0-9]/g, "");
-  return { id, title: title || "無題" };
+  const title = other.join(" ") || "無題";
+  return { id, title };
 };
 
 const parseEnTitle = (original: string) => {
