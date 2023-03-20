@@ -56,14 +56,15 @@ const getPanelCanDeleted = (body: Element, index: number): Partial<Panel> => {
     return deletedPanel;
   }
 
-  const title = body.querySelector(`h2#content_1_${index}`)?.textContent;
+  const h2 = body.querySelector(`h2#content_1_${index}`)?.textContent!;
+  const { id, title } = parseJaTitle(h2);
   const students = [
     ...body.querySelectorAll(`#rgn_description${index} > p > a`),
   ].map((node) => node.textContent);
   const href = body.querySelector(`#rgn_content${index} > blockquote > a`)
     ?.getAttribute("href") ?? undefined;
 
-  return { title, students, href };
+  return { id, title, students, href };
 };
 
 const getPanel = (
