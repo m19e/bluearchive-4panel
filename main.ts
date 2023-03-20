@@ -149,9 +149,10 @@ const writePanels = async (filepath: string, panels: Partial<Panel>[]) => {
 };
 
 const jaPanels = await getMultiPage(JA_URL);
-const enPanels = await getMultiPage(EN_URL);
-const aoharuPanels = await getMultiPage(AORECO_URL);
-
 await writePanels("out/ja.json", jaPanels);
+
+const enPanels = await getMultiPage(EN_URL);
 await writePanels("out/en.json", enPanels);
+
+const aoharuPanels = await getMultiPage(AORECO_URL);
 await writePanels("out/aoharu.json", aoharuPanels);
