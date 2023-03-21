@@ -2,7 +2,7 @@ import ky from "ky";
 import { DOMParser } from "dom";
 import type { Element } from "dom";
 
-import { AORECO_URL, BASE_URL, EN_URL, JA_URL } from "/consts/url.ts";
+import { AOHARU_RECORD_URL, BASE_URL, EN_URL, JA_URL } from "/consts/url.ts";
 import { Panel } from "/types/panel.ts";
 import { sleep } from "/utils/tools.ts";
 
@@ -173,5 +173,5 @@ await writePanels("out/ja.json", jaPanels);
 const enPanels = await getMultiPage(EN_URL);
 await writePanels("out/en.json", enPanels);
 
-const aoharuPanels = await getMultiPage(AORECO_URL);
+const aoharuPanels = await getMultiPage(AOHARU_RECORD_URL);
 await writePanels("out/aoharu.json", aoharuPanels);

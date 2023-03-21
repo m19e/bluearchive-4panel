@@ -1,6 +1,6 @@
 export const BASE_URL = "https://bluearchive.wikiru.jp/";
 
-export const AORECO_URL =
+export const AOHARU_RECORD_URL =
   "https://bluearchive.wikiru.jp/?Twitter%E9%80%A3%E8%BC%89/%E3%81%82%E3%81%8A%E3%81%AF%E3%82%8B%E3%83%AC%E3%82%B3%E3%83%BC%E3%83%89/001%EF%BD%9E010%E8%A9%B1";
 
 export const JA_URL =
