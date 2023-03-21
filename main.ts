@@ -3,6 +3,7 @@ import { DOMParser } from "dom";
 import type { Element } from "dom";
 
 import { AORECO_URL, BASE_URL, EN_URL, JA_URL } from "/consts/url.ts";
+import { Panel } from "/types/panel.ts";
 import { sleep } from "/utils/tools.ts";
 
 const getHtmlUtf8 = async (res: Response): Promise<string> => {
@@ -13,13 +14,6 @@ const getHtmlUtf8 = async (res: Response): Promise<string> => {
   return text.includes("text/html; charset=Shift_JIS")
     ? new TextDecoder("shift-jis").decode(resBuf)
     : text;
-};
-
-type Panel = {
-  id: string;
-  title: string;
-  students: string[];
-  href: string;
 };
 
 const deletedURL =
