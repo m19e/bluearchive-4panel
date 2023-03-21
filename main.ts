@@ -161,17 +161,17 @@ const getMultiPage = async (firstUrl: string) => {
   return result;
 };
 
-const writePanels = async (filepath: string, panels: Partial<Panel>[]) => {
+const writeJSON = async (filepath: string, panels: Partial<Panel>[]) => {
   const encoder = new TextEncoder();
   const data = encoder.encode(JSON.stringify(panels));
   await Deno.writeFile(filepath, data);
 };
 
 const jaPanels = await getMultiPage(JA_URL);
-await writePanels("out/ja.json", jaPanels);
+await writeJSON("out/ja.json", jaPanels);
 
 const enPanels = await getMultiPage(EN_URL);
-await writePanels("out/en.json", enPanels);
+await writeJSON("out/en.json", enPanels);
 
 const aoharuPanels = await getMultiPage(AOHARU_RECORD_URL);
-await writePanels("out/aoharu.json", aoharuPanels);
+await writeJSON("out/aoharu.json", aoharuPanels);
