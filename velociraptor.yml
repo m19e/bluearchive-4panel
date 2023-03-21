@@ -24,6 +24,14 @@ scripts:
       - net
       - env
 
+  dev:
+    desc: Starts dev script
+    cmd: dev.ts
+    # watch: true
+    allow:
+      - net
+      - write
+
   deps:
     desc: Update dependencies with ensuring pass tests
     cmd: udd deps.ts --test="vr test"
