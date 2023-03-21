@@ -3,7 +3,7 @@
   "lint": {
     "rules": {
       "tags": ["recommended"],
-      "exclude": ["no-unused-vars"]
+      "exclude": ["no-unused-vars", "no-explicit-any"]
     }
   }
 }
