@@ -1,5 +1,3 @@
-import { Panel } from "/types/panel.ts";
-
 export const sleep = (ms: number) => new Promise((res) => setTimeout(res, ms));
 
 export const getHtmlUtf8 = async (res: Response): Promise<string> => {
@@ -12,8 +10,8 @@ export const getHtmlUtf8 = async (res: Response): Promise<string> => {
     : text;
 };
 
-export const writeJSON = async (filepath: string, panels: Partial<Panel>[]) => {
+export const writeJSON = async (filepath: string, array: any[]) => {
   const encoder = new TextEncoder();
-  const data = encoder.encode(JSON.stringify(panels));
+  const data = encoder.encode(JSON.stringify(array));
   await Deno.writeFile(filepath, data);
 };
