@@ -943,7 +943,7 @@ export const EN_PANELS = [{
   "href": "https://twitter.com/en_bluearchive/status/1636653829184958464",
 }];
 
-export const AOHRAU_PANELS = [{
+export const AOHARU_RECORD_PANELS = [{
   "id": "0",
   "title": "はじまります！",
   "students": ["アロナ"],
