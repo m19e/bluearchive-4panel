@@ -4,17 +4,7 @@ import type { Element } from "dom";
 
 import { AOHARU_RECORD_URL, BASE_URL, EN_URL, JA_URL } from "/consts/url.ts";
 import { Panel } from "/types/panel.ts";
-import { sleep } from "/utils/tools.ts";
-
-const getHtmlUtf8 = async (res: Response): Promise<string> => {
-  const resBuf = await res.arrayBuffer();
-  const text = new TextDecoder().decode(resBuf);
-
-  // convert to UTF-8 if charset is Shift-JIS
-  return text.includes("text/html; charset=Shift_JIS")
-    ? new TextDecoder("shift-jis").decode(resBuf)
-    : text;
-};
+import { getHtmlUtf8, sleep, writeJSON } from "/utils/tools.ts";
 
 const deletedURL =
   "https://bluearchive.wikiru.jp/?Twitter%E9%80%A3%E8%BC%89/%E3%81%B6%E3%82%8B%E3%83%BC%E3%81%82%E3%83%BC%E3%81%8B%E3%81%84%E3%81%B6%E3%81%A3%EF%BC%81/041%EF%BD%9E050%E8%A9%B1";
@@ -159,12 +149,6 @@ const getMultiPage = async (firstUrl: string) => {
   console.log("Panels count:", result.length);
 
   return result;
-};
-
-const writeJSON = async (filepath: string, panels: Partial<Panel>[]) => {
-  const encoder = new TextEncoder();
-  const data = encoder.encode(JSON.stringify(panels));
-  await Deno.writeFile(filepath, data);
 };
 
 const jaPanels = await getMultiPage(JA_URL);
