@@ -10,8 +10,8 @@ export const getHtmlUtf8 = async (res: Response): Promise<string> => {
     : text;
 };
 
-export const writeJSON = async (filepath: string, array: any[]) => {
+export const writeJSON = async (filepath: string, input: any) => {
   const encoder = new TextEncoder();
-  const data = encoder.encode(JSON.stringify(array));
+  const data = encoder.encode(JSON.stringify(input));
   await Deno.writeFile(filepath, data);
 };
