@@ -1,6 +1,6 @@
 import ky from "ky";
 import { DOMParser } from "dom";
-import { Element } from "dom";
+import type { Node } from "dom";
 
 import { EN_STUDENTS, JA_STUDENTS } from "/consts/student.ts";
 import { AOHARU_RECORD_PANELS, EN_PANELS, JA_PANELS } from "/consts/panel.ts";
@@ -148,16 +148,20 @@ if (!dom) {
   throw new Error("DOM parse failed");
 }
 
+const getSchoolFromNode = (node: Node) => {
+  const { firstChild } = node;
+  const en = firstChild.textContent;
+  const id = toID(en);
+  return { type: "school", id, en };
+};
+
 let currentSchool = { type: "school", id: "init", en: "Initial" };
 
 console.log(
   [...dom.querySelectorAll(npcSelector)].map((node) => {
     const { nodeName } = node;
     if (nodeName === "H2") {
-      const { firstChild } = node;
-      const en = firstChild.textContent;
-      const id = en.split(" ").join("_").toLowerCase();
-      const school = { type: "school", id, en };
+      const school = getSchoolFromNode(node);
       currentSchool = school;
 
       return school;
