@@ -152,10 +152,24 @@ const getSchoolFromNode = (node: Node) => {
   const { firstChild } = node;
   const en = firstChild.textContent;
   const id = toID(en);
-  return { type: "school", id, en };
+  return { id, en };
 };
 
-let currentSchool = { type: "school", id: "init", en: "Initial" };
+const getStudentFromNode = (node: Node) => {
+  const data = [...node.childNodes].filter((n) => n.textContent.trim()).map((
+    n,
+  ) => n.textContent).reverse();
+
+  const [en, club] = data;
+  if (terror[en]) return terror[en];
+
+  const id = toID(en);
+  const ja = getStudentKanaFromRoman(en);
+
+  return { id, ja, en, club, school: currentSchool.id };
+};
+
+let currentSchool = { id: "init", en: "Initial" };
 
 console.log(
   [...dom.querySelectorAll(npcSelector)].map((node) => {
@@ -164,21 +178,11 @@ console.log(
       const school = getSchoolFromNode(node);
       currentSchool = school;
 
-      return school;
+      return null;
     }
 
-    const data = [...node.childNodes].filter((n) => n.textContent.trim()).map((
-      n,
-    ) => n.textContent).reverse();
-
-    const [en, club] = data;
-    if (terror[en]) return terror[en];
-
-    const id = toID(en);
-    const ja = getStudentKanaFromRoman(en);
-
-    return { type: "student", id, ja, en, club, school: currentSchool.id };
-  }).filter(({ type, en, club }) =>
-    type === "student" && club !== "Gematria" && !(rejectEn[en])
+    return getStudentFromNode(node);
+  }).filter((s) => s !== null).filter(({ en, club }) =>
+    club !== "Gematria" && !(rejectEn[en])
   ),
 );
