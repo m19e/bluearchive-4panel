@@ -137,16 +137,13 @@ const rejectEn: Record<string, string> = {
   "Master Shiba": "柴大将",
 };
 
-const NPC_URL = "https://bluearchive.fandom.com/wiki/Category:NPC";
-const npcSelector =
-  " #mw-content-text > div.mw-parser-output > h2, div[style$='border:2px solid 02D3FB !important; border-radius:5px; border: 2px solid #02D3FB; display:inline-block; position:relative; height:100px; width:115px; overflow:hidden; vertical-align:middle; margin-top:2px; margin-bottom:2px; transform: skewX(-10deg); margin-left: 8px; margin-right: -7px;']";
-
-const res = await ky(NPC_URL);
-const html = await getHtmlUtf8(res);
-const dom = new DOMParser().parseFromString(html, "text/html");
-if (!dom) {
-  throw new Error("DOM parse failed");
-}
+type FondomStudent = {
+  id: string;
+  ja: string;
+  en: string;
+  club: string;
+  school: string;
+};
 
 const getSchoolFromNode = (node: Node) => {
   const { firstChild } = node;
@@ -155,7 +152,10 @@ const getSchoolFromNode = (node: Node) => {
   return { id, en };
 };
 
-const getStudentFromNode = (node: Node) => {
+const getStudentFromNode = (
+  node: Node,
+  currentSchool: { id: string; en: string },
+): FondomStudent => {
   const data = [...node.childNodes].filter((n) => n.textContent.trim()).map((
     n,
   ) => n.textContent).reverse();
@@ -169,20 +169,35 @@ const getStudentFromNode = (node: Node) => {
   return { id, ja, en, club, school: currentSchool.id };
 };
 
-let currentSchool = { id: "init", en: "Initial" };
+const NPC_URL = "https://bluearchive.fandom.com/wiki/Category:NPC";
+const npcSelector =
+  " #mw-content-text > div.mw-parser-output > h2, div[style$='border:2px solid 02D3FB !important; border-radius:5px; border: 2px solid #02D3FB; display:inline-block; position:relative; height:100px; width:115px; overflow:hidden; vertical-align:middle; margin-top:2px; margin-bottom:2px; transform: skewX(-10deg); margin-left: 8px; margin-right: -7px;']";
 
-console.log(
-  [...dom.querySelectorAll(npcSelector)].map((node) => {
-    const { nodeName } = node;
-    if (nodeName === "H2") {
+const getNPCsFromFandom = async () => {
+  const res = await ky(NPC_URL);
+  const html = await getHtmlUtf8(res);
+  const dom = new DOMParser().parseFromString(html, "text/html");
+  if (!dom) {
+    throw new Error("DOM parse failed");
+  }
+
+  let currentSchool = { id: "", en: "" };
+  let students: FondomStudent[] = [];
+
+  dom.querySelectorAll(npcSelector).forEach((node) => {
+    if (node.nodeName === "H2") {
       const school = getSchoolFromNode(node);
       currentSchool = school;
-
-      return null;
     }
 
-    return getStudentFromNode(node);
-  }).filter((s) => s !== null).filter(({ en, club }) =>
+    students = [...students, getStudentFromNode(node, currentSchool)];
+  });
+
+  const filtered = students.filter(({ en, club }) =>
     club !== "Gematria" && !(rejectEn[en])
-  ),
-);
+  );
+
+  console.log(filtered);
+};
+
+await getNPCsFromFandom();
