@@ -37,8 +37,9 @@ const exceptionIds: Record<string, string> = {
   "Hatsune Miku": "hatsune_miku",
 };
 
-const convertSchoolToID = (school: string) =>
-  school.split(" ").join("_").toLowerCase() as SchoolID;
+const toID = (en: string) => en.split(" ").join("_").toLowerCase();
+
+const convertSchoolToID = (school: string) => toID(school) as SchoolID;
 
 const getEnCharacters = async () => {
   const res = await ky("https://bluearchive.wiki/wiki/Characters");
@@ -169,7 +170,7 @@ console.log(
     const [en, club] = data;
     if (terror[en]) return terror[en];
 
-    const id = en.split(" ").join("_").toLowerCase();
+    const id = toID(en);
     const ja = getStudentKanaFromRoman(en);
 
     return { type: "student", id, ja, en, club, school: currentSchool.id };
