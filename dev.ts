@@ -1,42 +1,30 @@
 import ky from "ky";
 import { DOMParser } from "dom";
+import { Element } from "dom";
 
-import { EN_STUDENTS } from "/consts/student.ts";
-import { Panel } from "/types/panel.ts";
+import { EN_STUDENTS, JA_STUDENTS } from "/consts/student.ts";
+import { AOHARU_RECORD_PANELS, EN_PANELS, JA_PANELS } from "/consts/panel.ts";
+import { Panel, SchoolID, StudentData } from "/types/panel.ts";
 import { getHtmlUtf8, sleep, writeJSON } from "/utils/tools.ts";
 import { convertRomanToKana } from "/utils/romanToKana.ts";
 
-const SCHOOLS = {
-  abydos: { id: "abydos", ja: "アビドス", en: "Abydos" },
-  gehenna: { id: "gehenna", ja: "ゲヘナ", en: "Gehenna" },
-  trinity: { id: "trinity", ja: "トリニティ", en: "Trinity" },
-  millennium: { id: "millennium", ja: "ミレニアム", en: "Millennium" },
-  shanhaijing: { id: "shanhaijing", ja: "山海経", en: "Shanhaijing" },
-  red_winter: { id: "red_winter", ja: "レッドウィンター", en: "Red Winter" },
-  srt: { id: "srt", ja: "SRT特殊学園", en: "SRT" },
-  valkyrie: { id: "valkyrie", ja: "ヴァルキューレ", en: "Valkyrie" },
-  arius: { id: "arius", ja: "アリウス", en: "Arius" },
-  hyakkiyako: { id: "hyakkiyako", ja: "百鬼夜行", en: "Hyakkiyako" },
-  etc: { id: "etc", ja: "その他", en: "ETC" },
-} as const;
-
-type SchoolID = keyof typeof SCHOOLS;
-type Student = { id: string; ja: string; en: string; school: SchoolID };
-type StudentData = Record<string, Student>;
+const INITIAL_STUDENT_DATA: StudentData = {};
 
 const getStudents = (
   panels: Panel[],
 ) => [...new Set(panels.map((p) => p.students).flat())];
 
-const anotherWear: { [key: string]: string } = {
+const anotherWear: Record<string, string> = {
   "Shun (Kid)": "シュン（幼女）",
 };
 
-const exceptions: { [key: string]: string } = {
+const exceptions: Record<string, string> = {
   "Hatsune Miku": "初音ミク",
   "Kanna": "カンナ",
   "Mari": "マリー",
   "Pina": "フィーナ",
+  "GSC President": "連邦生徒会長",
+  "Master Shiba": "柴大将",
 };
 
 const getStudentKanaFromRoman = (roman: string) => {
@@ -44,10 +32,13 @@ const getStudentKanaFromRoman = (roman: string) => {
   return anotherWear[roman] || exceptions[name] || convertRomanToKana(name);
 };
 
-const exceptionIds: { [key: string]: string } = {
+const exceptionIds: Record<string, string> = {
   "Shun (Kid)": "shun_kid",
   "Hatsune Miku": "hatsune_miku",
 };
+
+const convertSchoolToID = (school: string) =>
+  school.split(" ").join("_").toLowerCase() as SchoolID;
 
 const getEnCharacters = async () => {
   const res = await ky("https://bluearchive.wiki/wiki/Characters");
@@ -76,11 +67,11 @@ const getEnCharacters = async () => {
       const id = exceptionIds[name] ?? en.toLowerCase();
       const ja = getStudentKanaFromRoman(name);
 
-      prev[id] = { id, ja, en, school: convertSchoolToID(school) as SchoolID };
+      prev[id] = { id, ja, en, school: convertSchoolToID(school) };
 
       return prev;
     },
-    {} as StudentData,
+    INITIAL_STUDENT_DATA,
   );
 
   await writeJSON("out/students.en.json", en_keyed);
@@ -107,18 +98,82 @@ const getJaCharacters = async () => {
   await sleep(5000);
 };
 
-const convertSchoolToID = (school: string) =>
-  school.split(" ").join("_").toLowerCase();
-
-const convert = () => {
-  const ja = Object.values(EN_STUDENTS as StudentData).reduce(
+const convertEnDataToJa = (en: StudentData) => {
+  const ja = Object.values(en).reduce(
     (prev, student) => {
       prev[student.ja] = student;
       return prev;
     },
-    {} as StudentData,
+    INITIAL_STUDENT_DATA,
   );
-  console.log(ja);
+
+  return ja;
 };
 
-convert();
+const terror: Record<string, any> = {
+  "Shiroko Terror": {
+    id: "shiroko_terror",
+    ja: "シロコ＊テラー",
+    en: "Shiroko Terror",
+    club: undefined,
+  },
+  "A.R.O.N.A": {
+    id: "plana",
+    ja: "プラナ",
+    en: "Plana",
+    club: "SCHALE",
+  },
+};
+
+const rejectEn: Record<string, string> = {
+  "Kanna": "Kanna",
+  "Nao": "Nao",
+  "Pei": "Pei",
+  "Reizyo": "Reizyo",
+  "Sensei": "先生",
+  "Phrenapates": "プレナパテス",
+  "Nyanten-maru": "ニャン天丸",
+  "Master Shiba": "柴大将",
+};
+
+const NPC_URL = "https://bluearchive.fandom.com/wiki/Category:NPC";
+const npcSelector =
+  " #mw-content-text > div.mw-parser-output > h2, div[style$='border:2px solid 02D3FB !important; border-radius:5px; border: 2px solid #02D3FB; display:inline-block; position:relative; height:100px; width:115px; overflow:hidden; vertical-align:middle; margin-top:2px; margin-bottom:2px; transform: skewX(-10deg); margin-left: 8px; margin-right: -7px;']";
+
+const res = await ky(NPC_URL);
+const html = await getHtmlUtf8(res);
+const dom = new DOMParser().parseFromString(html, "text/html");
+if (!dom) {
+  throw new Error("DOM parse failed");
+}
+
+let currentSchool = { type: "school", id: "init", en: "Initial" };
+
+console.log(
+  [...dom.querySelectorAll(npcSelector)].map((node) => {
+    const { nodeName } = node;
+    if (nodeName === "H2") {
+      const { firstChild } = node;
+      const en = firstChild.textContent;
+      const id = en.split(" ").join("_").toLowerCase();
+      const school = { type: "school", id, en };
+      currentSchool = school;
+
+      return school;
+    }
+
+    const data = [...node.childNodes].filter((n) => n.textContent.trim()).map((
+      n,
+    ) => n.textContent).reverse();
+
+    const [en, club] = data;
+    if (terror[en]) return terror[en];
+
+    const id = en.split(" ").join("_").toLowerCase();
+    const ja = getStudentKanaFromRoman(en);
+
+    return { type: "student", id, ja, en, club, school: currentSchool.id };
+  }).filter(({ type, en, club }) =>
+    type === "student" && club !== "Gematria" && !(rejectEn[en])
+  ),
+);
