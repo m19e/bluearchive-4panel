@@ -137,7 +137,7 @@ const rejectEn: Record<string, string> = {
   "Master Shiba": "柴大将",
 };
 
-type FondomStudent = {
+type FandomStudent = {
   id: string;
   ja: string;
   en: string;
@@ -155,7 +155,7 @@ const getSchoolFromNode = (node: Node) => {
 const getStudentFromNode = (
   node: Node,
   currentSchool: { id: string; en: string },
-): FondomStudent => {
+): FandomStudent => {
   const data = [...node.childNodes].filter((n) => n.textContent.trim()).map((
     n,
   ) => n.textContent).reverse();
@@ -182,12 +182,13 @@ const getNPCsFromFandom = async () => {
   }
 
   let currentSchool = { id: "", en: "" };
-  let students: FondomStudent[] = [];
+  let students: FandomStudent[] = [];
 
   dom.querySelectorAll(npcSelector).forEach((node) => {
     if (node.nodeName === "H2") {
       const school = getSchoolFromNode(node);
       currentSchool = school;
+      return;
     }
 
     students = [...students, getStudentFromNode(node, currentSchool)];
