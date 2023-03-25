@@ -81,27 +81,7 @@ const getEnCharacters = async () => {
     INITIAL_STUDENT_DATA,
   );
 
-  await writeJSON("out/students.en.json", en_keyed);
-  await sleep(5000);
-};
-
-const getJaCharacters = async () => {
-  const res = await ky(
-    "https://bluearchive.wikiru.jp/?%E3%82%AD%E3%83%A3%E3%83%A9%E3%82%AF%E3%82%BF%E3%83%BC%E4%B8%80%E8%A6%A7",
-  );
-  const html = await getHtmlUtf8(res);
-  const dom = new DOMParser().parseFromString(html, "text/html");
-  if (!dom) {
-    throw new Error("DOM parse failed");
-  }
-
-  const tds = dom.querySelectorAll(
-    "#sortabletable1 > tbody > tr > td:nth-child(3)",
-  );
-  const students = [...tds].map((s) => s.textContent).filter((t) => t);
-  console.log(students.length, students);
-
-  await writeJSON("out/students.ja.json", students);
+  await writeJSON("out/students/playable/en.json", en_keyed);
   await sleep(5000);
 };
 
