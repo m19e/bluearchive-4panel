@@ -1,5 +1,5 @@
-import enJson from "/out/students.en.json" assert { type: "json" };
-import jaJson from "/out/students.ja.json" assert { type: "json" };
+import enJson from "/out/students/playable/en.json" assert { type: "json" };
+import jaJson from "/out/students/playable/ja.json" assert { type: "json" };
 import jaNpc from "/out/students/npc/ja.json" assert { type: "json" };
 
 import { FandomStudentData, StudentData } from "/types/panel.ts";
