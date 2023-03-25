@@ -152,10 +152,10 @@ const getMultiPage = async (firstUrl: string) => {
 };
 
 const jaPanels = await getMultiPage(JA_URL);
-await writeJSON("out/ja.json", jaPanels);
+await writeJSON("out/panels/ja.json", jaPanels);
 
 const enPanels = await getMultiPage(EN_URL);
-await writeJSON("out/en.json", enPanels);
+await writeJSON("out/panels/en.json", enPanels);
 
 const aoharuPanels = await getMultiPage(AOHARU_RECORD_URL);
-await writeJSON("out/aoharu.json", aoharuPanels);
+await writeJSON("out/panels/aoharu.json", aoharuPanels);
