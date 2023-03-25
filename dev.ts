@@ -2,9 +2,15 @@ import ky from "ky";
 import { DOMParser } from "dom";
 import type { Node } from "dom";
 
-import { EN_STUDENTS, JA_STUDENTS } from "/consts/student.ts";
+import { EN_STUDENTS, JA_NPCS, JA_STUDENTS } from "/consts/student.ts";
 import { AOHARU_RECORD_PANELS, EN_PANELS, JA_PANELS } from "/consts/panel.ts";
-import { Panel, SchoolID, StudentData } from "/types/panel.ts";
+import {
+  FandomStudent,
+  FandomStudentData,
+  Panel,
+  SchoolID,
+  StudentData,
+} from "/types/panel.ts";
 import { getHtmlUtf8, sleep, writeJSON } from "/utils/tools.ts";
 import { convertRomanToKana } from "/utils/romanToKana.ts";
 
@@ -111,18 +117,20 @@ const convertEnDataToJa = (en: StudentData) => {
   return ja;
 };
 
-const terror: Record<string, any> = {
+const terror: FandomStudentData = {
   "Shiroko Terror": {
     id: "shiroko_terror",
     ja: "シロコ＊テラー",
     en: "Shiroko Terror",
-    club: undefined,
+    club: null,
+    school: "others_students",
   },
   "A.R.O.N.A": {
     id: "plana",
     ja: "プラナ",
     en: "Plana",
     club: "SCHALE",
+    school: "others_students",
   },
 };
 
@@ -135,14 +143,6 @@ const rejectEn: Record<string, string> = {
   "Phrenapates": "プレナパテス",
   "Nyanten-maru": "ニャン天丸",
   "Master Shiba": "柴大将",
-};
-
-type FandomStudent = {
-  id: string;
-  ja: string;
-  en: string;
-  club: string;
-  school: string;
 };
 
 const getSchoolFromNode = (node: Node) => {
@@ -160,13 +160,15 @@ const getStudentFromNode = (
     n,
   ) => n.textContent).reverse();
 
-  const [en, club] = data;
+  const [en, cl] = data;
   if (terror[en]) return terror[en];
 
   const id = toID(en);
   const ja = getStudentKanaFromRoman(en);
+  const club = cl ?? null;
+  const school = currentSchool.id;
 
-  return { id, ja, en, club, school: currentSchool.id };
+  return { id, ja, en, club, school };
 };
 
 const NPC_URL = "https://bluearchive.fandom.com/wiki/Category:NPC";
@@ -198,7 +200,24 @@ const getNPCsFromFandom = async () => {
     club !== "Gematria" && !(rejectEn[en])
   );
 
-  console.log(filtered);
+  const en_keyed = filtered.reduce(
+    (prev, student) => {
+      prev[student.id] = student;
+      return prev;
+    },
+    {} as FandomStudentData,
+  );
+  const ja_keyed = Object.values(en_keyed).reduce(
+    (prev, student) => {
+      prev[student.ja] = student;
+      return prev;
+    },
+    {} as FandomStudentData,
+  );
+
+  await writeJSON("out/npc/en.json", en_keyed);
+  await writeJSON("out/npc/ja.json", ja_keyed);
+  console.log(en_keyed, ja_keyed);
 };
 
 await getNPCsFromFandom();
