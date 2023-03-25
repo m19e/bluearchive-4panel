@@ -2,7 +2,7 @@ import ky from "ky";
 import { DOMParser } from "dom";
 import type { Node } from "dom";
 
-import { EN_STUDENTS, JA_NPCS, JA_STUDENTS } from "/consts/student.ts";
+import { JA_NPC, JA_PLAYABLE } from "/consts/student.ts";
 import { AOHARU_RECORD_PANELS, EN_PANELS, JA_PANELS } from "/consts/panel.ts";
 import {
   FandomStudent,
