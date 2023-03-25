@@ -180,23 +180,24 @@ const getNPCsFromFandom = async () => {
     club !== "Gematria" && !(rejectEn[en])
   );
 
+  const initial = {} as FandomStudentData;
   const en_keyed = filtered.reduce(
     (prev, student) => {
       prev[student.id] = student;
       return prev;
     },
-    {} as FandomStudentData,
+    initial,
   );
   const ja_keyed = Object.values(en_keyed).reduce(
     (prev, student) => {
       prev[student.ja] = student;
       return prev;
     },
-    {} as FandomStudentData,
+    initial,
   );
 
-  await writeJSON("out/npc/en.json", en_keyed);
-  await writeJSON("out/npc/ja.json", ja_keyed);
+  await writeJSON("out/students/npc/en.json", en_keyed);
+  await writeJSON("out/students/npc/ja.json", ja_keyed);
   console.log(en_keyed, ja_keyed);
 };
 
