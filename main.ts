@@ -155,14 +155,20 @@ const getMultiPage = async (firstUrl: string) => {
 const jaPanels = await getMultiPage(JA_URL);
 if (jaPanels.length !== JA_PANELS.length) {
   await writeJSON("out/panels/ja.json", jaPanels);
+} else {
+  console.log("skip: same panels/ja count");
 }
 
 const enPanels = await getMultiPage(EN_URL);
 if (enPanels.length !== EN_PANELS.length) {
   await writeJSON("out/panels/en.json", enPanels);
+} else {
+  console.log("skip: same panels/en count");
 }
 
 const aoharuPanels = await getMultiPage(AOHARU_RECORD_URL);
 if (aoharuPanels.length !== AOHARU_RECORD_PANELS.length) {
   await writeJSON("out/panels/aoharu.json", aoharuPanels);
+} else {
+  console.log("skip: same panels/aoharu count");
 }
