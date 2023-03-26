@@ -115,10 +115,10 @@ const terror: FandomStudentData = {
 };
 
 const rejectEn: Record<string, string> = {
-  "Kanna": "Kanna",
-  "Nao": "Nao",
-  "Pei": "Pei",
-  "Reizyo": "Reizyo",
+  "Kanna": "",
+  "Nao": "",
+  "Pei": "",
+  "Reizyo": "",
   "Sensei": "先生",
   "Phrenapates": "プレナパテス",
   "Nyanten-maru": "ニャン天丸",
