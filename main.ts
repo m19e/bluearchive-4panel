@@ -3,6 +3,7 @@ import { DOMParser } from "dom";
 import type { Element } from "dom";
 
 import { AOHARU_RECORD_URL, BASE_URL, EN_URL, JA_URL } from "/consts/url.ts";
+import { AOHARU_RECORD_PANELS, EN_PANELS, JA_PANELS } from "/consts/panel.ts";
 import { Panel } from "/types/panel.ts";
 import { getHtmlUtf8, sleep, writeJSON } from "/utils/tools.ts";
 
@@ -152,10 +153,16 @@ const getMultiPage = async (firstUrl: string) => {
 };
 
 const jaPanels = await getMultiPage(JA_URL);
-await writeJSON("out/panels/ja.json", jaPanels);
+if (jaPanels.length !== JA_PANELS.length) {
+  await writeJSON("out/panels/ja.json", jaPanels);
+}
 
 const enPanels = await getMultiPage(EN_URL);
-await writeJSON("out/panels/en.json", enPanels);
+if (enPanels.length !== EN_PANELS.length) {
+  await writeJSON("out/panels/en.json", enPanels);
+}
 
 const aoharuPanels = await getMultiPage(AOHARU_RECORD_URL);
-await writeJSON("out/panels/aoharu.json", aoharuPanels);
+if (aoharuPanels.length !== AOHARU_RECORD_PANELS.length) {
+  await writeJSON("out/panels/aoharu.json", aoharuPanels);
+}
