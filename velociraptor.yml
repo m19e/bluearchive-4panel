@@ -24,13 +24,20 @@ scripts:
       - net
       - env
 
-  dev:
-    desc: Starts dev script
-    cmd: dev.ts && deno fmt out
-    # watch: true
+  update:
+    desc: Update panels
+    cmd: main.ts && deno fmt out
     allow:
       - net
       - write
+
+  update:charas:
+    desc: Update characters
+    cmd: dev.ts && deno fmt out
+    allow:
+      - net
+      - write
+
 
   deps:
     desc: Update dependencies with ensuring pass tests
