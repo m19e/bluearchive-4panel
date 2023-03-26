@@ -14,8 +14,6 @@ import {
 import { getHtmlUtf8, sleep, writeJSON } from "/utils/tools.ts";
 import { convertRomanToKana } from "/utils/romanToKana.ts";
 
-const INITIAL_STUDENT_DATA: StudentData = {};
-
 const getStudents = (
   panels: Panel[],
 ) => [...new Set(panels.map((p) => p.students).flat())];
@@ -47,7 +45,7 @@ const toID = (en: string) => en.split(" ").join("_").toLowerCase();
 
 const convertSchoolToID = (school: string) => toID(school) as SchoolID;
 
-const getEnCharacters = async () => {
+const getCharacters = async () => {
   const res = await ky("https://bluearchive.wiki/wiki/Characters");
   const html = await getHtmlUtf8(res);
   const dom = new DOMParser().parseFromString(html, "text/html");
@@ -80,8 +78,10 @@ const getEnCharacters = async () => {
     },
     {} as StudentData,
   );
+  const ja_keyed = convertEnDataToJa(en_keyed);
 
   await writeJSON("out/students/playable/en.json", en_keyed);
+  await writeJSON("out/students/playable/ja.json", ja_keyed);
   await sleep(5000);
 };
 
@@ -197,7 +197,26 @@ const getNPCsFromFandom = async () => {
 
   await writeJSON("out/students/npc/en.json", en_keyed);
   await writeJSON("out/students/npc/ja.json", ja_keyed);
-  console.log(en_keyed, ja_keyed);
+  // console.log(en_keyed, ja_keyed);
 };
 
-await getNPCsFromFandom();
+await getCharacters();
+// await getNPCsFromFandom();
+
+console.log(
+  JSON.stringify(
+    [
+      // ...JA_PANELS,
+      // ...EN_PANELS,
+      ...AOHARU_RECORD_PANELS,
+    ].map((panel) => ({
+      ...panel,
+      students: panel.students.map((s) => (JA_PLAYABLE[s] ?? JA_NPC[s]).id ?? s)
+        .join(
+          ", ",
+        ),
+    })),
+    null,
+    2,
+  ),
+);
