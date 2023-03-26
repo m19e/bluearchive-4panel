@@ -26,7 +26,7 @@ scripts:
 
   dev:
     desc: Starts dev script
-    cmd: dev.ts
+    cmd: dev.ts && deno fmt out
     # watch: true
     allow:
       - net
