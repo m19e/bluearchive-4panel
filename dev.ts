@@ -3,7 +3,6 @@ import { DOMParser } from "dom";
 import type { Node } from "dom";
 
 import { JA_NPC, JA_PLAYABLE } from "/consts/student.ts";
-import { AOHARU_RECORD_PANELS, EN_PANELS, JA_PANELS } from "/consts/panel.ts";
 import {
   FandomStudent,
   FandomStudentData,
@@ -66,7 +65,7 @@ const getCharacters = async () => {
     return { name, school };
   });
 
-  const en_keyed = students.reduce(
+  const en = students.reduce(
     (prev, { name, school }) => {
       const en = anotherWear[name] ? name : name.split(" (")[0];
       const id = exceptionIds[name] ?? en.toLowerCase();
@@ -78,11 +77,11 @@ const getCharacters = async () => {
     },
     {} as StudentData,
   );
-  const ja_keyed = convertEnDataToJa(en_keyed);
+  const ja = convertEnDataToJa(en);
 
-  await writeJSON("out/students/playable/en.json", en_keyed);
-  await writeJSON("out/students/playable/ja.json", ja_keyed);
   await sleep(5000);
+
+  return { ja, en };
 };
 
 const convertEnDataToJa = (en: StudentData) => {
@@ -180,14 +179,14 @@ const getNPCsFromFandom = async () => {
     club !== "Gematria" && !(rejectEn[en])
   );
 
-  const en_keyed = filtered.reduce(
+  const en = filtered.reduce(
     (prev, student) => {
       prev[student.id] = student;
       return prev;
     },
     {} as FandomStudentData,
   );
-  const ja_keyed = filtered.reduce(
+  const ja = filtered.reduce(
     (prev, student) => {
       prev[student.ja] = student;
       return prev;
@@ -195,28 +194,28 @@ const getNPCsFromFandom = async () => {
     {} as FandomStudentData,
   );
 
-  await writeJSON("out/students/npc/en.json", en_keyed);
-  await writeJSON("out/students/npc/ja.json", ja_keyed);
-  // console.log(en_keyed, ja_keyed);
+  return { ja, en };
 };
 
-await getCharacters();
-// await getNPCsFromFandom();
+type Data = Record<string, any>;
+const checkShouldUpdate = (data1: Data, data2: Data) => {
+  return Object.keys(data1).length !== Object.keys(data2).length;
+};
 
-console.log(
-  JSON.stringify(
-    [
-      // ...JA_PANELS,
-      // ...EN_PANELS,
-      ...AOHARU_RECORD_PANELS,
-    ].map((panel) => ({
-      ...panel,
-      students: panel.students.map((s) => (JA_PLAYABLE[s] ?? JA_NPC[s]).id ?? s)
-        .join(
-          ", ",
-        ),
-    })),
-    null,
-    2,
-  ),
-);
+const playable = await getCharacters();
+if (checkShouldUpdate(playable.ja, JA_PLAYABLE)) {
+  console.log("update: PLAYABLE");
+  await writeJSON("out/students/playable/ja.json", playable.ja);
+  await writeJSON("out/students/playable/en.json", playable.en);
+} else {
+  console.log("skip: same playable count");
+}
+
+const npcs = await getNPCsFromFandom();
+if (checkShouldUpdate(npcs.ja, JA_NPC)) {
+  console.log("update: NPC");
+  await writeJSON("out/students/npc/ja.json", npcs.ja);
+  await writeJSON("out/students/npc/en.json", npcs.en);
+} else {
+  console.log("skip: same npc count");
+}
