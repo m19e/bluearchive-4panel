@@ -78,7 +78,7 @@ const getEnCharacters = async () => {
 
       return prev;
     },
-    INITIAL_STUDENT_DATA,
+    {} as StudentData,
   );
 
   await writeJSON("out/students/playable/en.json", en_keyed);
@@ -91,7 +91,7 @@ const convertEnDataToJa = (en: StudentData) => {
       prev[student.ja] = student;
       return prev;
     },
-    INITIAL_STUDENT_DATA,
+    {} as StudentData,
   );
 
   return ja;
@@ -115,10 +115,10 @@ const terror: FandomStudentData = {
 };
 
 const rejectEn: Record<string, string> = {
-  "Kanna": "",
-  "Nao": "",
-  "Pei": "",
-  "Reizyo": "",
+  "Kanna": "Kanna",
+  "Nao": "Nao",
+  "Pei": "Pei",
+  "Reizyo": "Reizyo",
   "Sensei": "先生",
   "Phrenapates": "プレナパテス",
   "Nyanten-maru": "ニャン天丸",
@@ -180,20 +180,19 @@ const getNPCsFromFandom = async () => {
     club !== "Gematria" && !(rejectEn[en])
   );
 
-  const initial = {} as FandomStudentData;
   const en_keyed = filtered.reduce(
     (prev, student) => {
       prev[student.id] = student;
       return prev;
     },
-    initial,
+    {} as FandomStudentData,
   );
-  const ja_keyed = Object.values(en_keyed).reduce(
+  const ja_keyed = filtered.reduce(
     (prev, student) => {
       prev[student.ja] = student;
       return prev;
     },
-    initial,
+    {} as FandomStudentData,
   );
 
   await writeJSON("out/students/npc/en.json", en_keyed);
