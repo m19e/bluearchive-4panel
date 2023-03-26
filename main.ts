@@ -152,22 +152,26 @@ const getMultiPage = async (firstUrl: string) => {
   return result;
 };
 
+const checkShouldUpdate = (arr1: any[], arr2: any[]) => {
+  return arr1.length !== arr2.length;
+};
+
 const jaPanels = await getMultiPage(JA_URL);
-if (jaPanels.length !== JA_PANELS.length) {
+if (checkShouldUpdate(jaPanels, JA_PANELS)) {
   await writeJSON("out/panels/ja.json", jaPanels);
 } else {
   console.log("skip: same panels/ja count");
 }
 
 const enPanels = await getMultiPage(EN_URL);
-if (enPanels.length !== EN_PANELS.length) {
+if (checkShouldUpdate(enPanels, EN_PANELS)) {
   await writeJSON("out/panels/en.json", enPanels);
 } else {
   console.log("skip: same panels/en count");
 }
 
 const aoharuPanels = await getMultiPage(AOHARU_RECORD_URL);
-if (aoharuPanels.length !== AOHARU_RECORD_PANELS.length) {
+if (checkShouldUpdate(aoharuPanels, AOHARU_RECORD_PANELS)) {
   await writeJSON("out/panels/aoharu.json", aoharuPanels);
 } else {
   console.log("skip: same panels/aoharu count");
