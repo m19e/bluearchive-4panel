@@ -5,6 +5,7 @@ export type Panel = {
   title: string;
   students: string[];
   href: string;
+  deleted?: boolean;
 };
 
 export type SchoolID = keyof typeof SCHOOLS;
