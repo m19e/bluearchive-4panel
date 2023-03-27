@@ -9,17 +9,21 @@ jobs:
   update:
     runs-on: ubuntu-latest
     steps:
-      - name: Setup Deno
-        uses: denoland/setup-deno@v1
-        with:
-          deno-version: v1.x
-
-      - name: Deno Run
-        run: deno run -q -A main.ts
-
-      - name: Deno Format
-        run: deno fmt docs
-
+      - uses: actions/checkout@master
+      - uses: denoland/setup-deno@v1
+      - uses: jurassiscripts/setup-velociraptor@v1
+      # - name: Setup Deno
+      #   uses: denoland/setup-deno@v1
+      #   with:
+      #     deno-version: v1.x
+      # - name: Deno Run
+      #   run: deno run -q -A main.ts
+      # - name: Deno Format
+      #   run: deno fmt docs
+      - name: Run update
+        env:
+          VR_HOOKS: "false"
+        run: vr update
       - name: Commit the changes
         uses: stefanzweifel/git-auto-commit-action@v4
         with:
