@@ -1,7 +1,7 @@
-# deno-boilerplate
+# 
 
-[![ci](https://github.com/kawarimidoll/deno-dev-template/workflows/ci/badge.svg)](.github/workflows/ci.yml)
-[![update](https://github.com/m19e/4panel-scraper/actions/workflows/update.yml/badge.svg)](https://github.com/m19e/4panel-scraper/actions/workflows/update.yml)
+[![ci](https://github.com/m19e/4panel-scraper/workflows/ci/badge.svg)](.github/workflows/ci.yml)
+[![update](https://github.com/m19e/4panel-scraper/workflows/update/badge.svg)](https://github.com/m19e/4panel-scraper/workflows/update.yml)
 [![vr scripts](https://badges.velociraptor.run/flat.svg)](https://velociraptor.run)
 [![LICENSE](https://img.shields.io/badge/license-MIT-brightgreen)](LICENSE)
 
