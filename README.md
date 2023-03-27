@@ -20,3 +20,9 @@ $ vr
 ```
 
 The scripts are defined in [velociraptor.yml](velociraptor.yml).
+
+## Reference
+
+- [ブルアカ攻略 Wiki (4-Panel)](https://bluearchive.wikiru.jp/?Twitter%E9%80%A3%E8%BC%89#Manga)
+- [Blue Archive Wiki (Playable)](https://bluearchive.wiki/wiki/Characters)
+- [Blue Archive Wiki | Fandom (NPC)](https://bluearchive.fandom.com/wiki/Category:NPC)
