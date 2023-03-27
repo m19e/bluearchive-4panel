@@ -56,8 +56,9 @@ Auto Update JSON for Blue Archive official 4-panel manga
 
 #### Example
 
+en.json => EN key
+
 ```json
-// en.json => EN key
 {
   "hanako": {
     "id": "hanako",
@@ -68,8 +69,9 @@ Auto Update JSON for Blue Archive official 4-panel manga
 }
 ```
 
+ja.json => JA key
+
 ```json
-// ja.json => JA key
 {
   "コハル": {
     "id": "koharu",
