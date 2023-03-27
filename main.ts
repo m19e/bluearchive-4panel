@@ -158,21 +158,21 @@ const checkShouldUpdate = (arr1: any[], arr2: any[]) => {
 
 const jaPanels = await getMultiPage(JA_URL);
 if (checkShouldUpdate(jaPanels, JA_PANELS)) {
-  await writeJSON("out/panels/ja.json", jaPanels);
+  await writeJSON("docs/panels/ja.json", jaPanels);
 } else {
   console.log("skip: same panels/ja count");
 }
 
 const enPanels = await getMultiPage(EN_URL);
 if (checkShouldUpdate(enPanels, EN_PANELS)) {
-  await writeJSON("out/panels/en.json", enPanels);
+  await writeJSON("docs/panels/en.json", enPanels);
 } else {
   console.log("skip: same panels/en count");
 }
 
 const aoharuPanels = await getMultiPage(AOHARU_RECORD_URL);
 if (checkShouldUpdate(aoharuPanels, AOHARU_RECORD_PANELS)) {
-  await writeJSON("out/panels/aoharu.json", aoharuPanels);
+  await writeJSON("docs/panels/aoharu.json", aoharuPanels);
 } else {
   console.log("skip: same panels/aoharu count");
 }

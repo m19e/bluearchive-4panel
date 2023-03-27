@@ -205,8 +205,8 @@ const checkShouldUpdate = (data1: Data, data2: Data) => {
 const playable = await getCharacters();
 if (checkShouldUpdate(playable.ja, JA_PLAYABLE)) {
   console.log("update: PLAYABLE");
-  await writeJSON("out/students/playable/ja.json", playable.ja);
-  await writeJSON("out/students/playable/en.json", playable.en);
+  await writeJSON("docs/students/playable/ja.json", playable.ja);
+  await writeJSON("docs/students/playable/en.json", playable.en);
 } else {
   console.log("skip: same playable count");
 }
@@ -214,8 +214,8 @@ if (checkShouldUpdate(playable.ja, JA_PLAYABLE)) {
 const npcs = await getNPCsFromFandom();
 if (checkShouldUpdate(npcs.ja, JA_NPC)) {
   console.log("update: NPC");
-  await writeJSON("out/students/npc/ja.json", npcs.ja);
-  await writeJSON("out/students/npc/en.json", npcs.en);
+  await writeJSON("docs/students/npc/ja.json", npcs.ja);
+  await writeJSON("docs/students/npc/en.json", npcs.en);
 } else {
   console.log("skip: same npc count");
 }
