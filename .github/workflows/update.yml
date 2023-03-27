@@ -8,7 +8,6 @@ on:
 jobs:
   update:
     runs-on: ubuntu-latest
-    using: composite
     steps:
       - name: Setup Deno
         uses: denoland/setup-deno@v1
