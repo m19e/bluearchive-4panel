@@ -249,7 +249,8 @@
     "id": "41",
     "title": "折衷案",
     "students": ["エイミ", "ヒマリ"],
-    "href": "https://bluearchive.jp/comics/41/1"
+    "href": "https://bluearchive.jp/comics/41/1",
+    "deleted": true
   },
   {
     "id": "42",
