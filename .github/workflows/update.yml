@@ -17,7 +17,7 @@ runs:
       run: deno run -q -A main.ts
 
     - name: Deno Format
-      run: deno fmt out
+      run: deno fmt docs
 
     - name: Commit the changes
       uses: stefanzweifel/git-auto-commit-action@v4

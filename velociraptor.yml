@@ -26,14 +26,14 @@ scripts:
 
   update:
     desc: Update panels
-    cmd: main.ts && deno fmt out
+    cmd: main.ts && deno fmt docs
     allow:
       - net
       - write
 
   update:charas:
     desc: Update characters
-    cmd: dev.ts && deno fmt out
+    cmd: dev.ts && deno fmt docs
     allow:
       - net
       - write
