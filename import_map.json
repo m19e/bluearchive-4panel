@@ -6,6 +6,6 @@
     "/consts/": "./consts/",
     "/types/": "./types/",
     "/utils/": "./utils/",
-    "/out/": "./out/"
+    "/docs/": "./docs/"
   }
 }
