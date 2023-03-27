@@ -5,21 +5,23 @@ on:
   schedule:
     - cron: '0 11 * * *'
 
-runs:
-  using: composite
-  steps:
-    - name: Setup Deno
-      uses: denoland/setup-deno@v1
-      with:
-        deno-version: v1.x
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    using: composite
+    steps:
+      - name: Setup Deno
+        uses: denoland/setup-deno@v1
+        with:
+          deno-version: v1.x
 
-    - name: Deno Run
-      run: deno run -q -A main.ts
+      - name: Deno Run
+        run: deno run -q -A main.ts
 
-    - name: Deno Format
-      run: deno fmt docs
+      - name: Deno Format
+        run: deno fmt docs
 
-    - name: Commit the changes
-      uses: stefanzweifel/git-auto-commit-action@v4
-      with:
-        commit_message: 'add: new 4-panel'
+      - name: Commit the changes
+        uses: stefanzweifel/git-auto-commit-action@v4
+        with:
+          commit_message: 'add: new 4-panel'
