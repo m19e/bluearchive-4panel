@@ -77,14 +77,6 @@ const getCharacters = async () => {
     },
     {} as StudentData,
   );
-  const ja = convertEnDataToJa(en);
-
-  await sleep(5000);
-
-  return { ja, en };
-};
-
-const convertEnDataToJa = (en: StudentData) => {
   const ja = Object.values(en).reduce(
     (prev, student) => {
       prev[student.ja] = student;
@@ -93,7 +85,9 @@ const convertEnDataToJa = (en: StudentData) => {
     {} as StudentData,
   );
 
-  return ja;
+  await sleep(5000);
+
+  return { ja, en };
 };
 
 const terror: FandomStudentData = {
