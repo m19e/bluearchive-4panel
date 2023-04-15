@@ -195,7 +195,7 @@
   },
   {
     "id": "32",
-    "title": "Roll out! Gourment Research Society",
+    "title": "Roll out! Gourmet Research Society",
     "students": ["ジュンコ", "イズミ", "ハルナ", "アカリ", "フウカ", "ジュリ"],
     "href": "https://twitter.com/en_bluearchive/status/1527575066761777152"
   },
@@ -483,5 +483,11 @@
     "title": "Just Forget It! Please!",
     "students": ["ユウカ", "ノア"],
     "href": "https://twitter.com/en_bluearchive/status/1644263918108545024"
+  },
+  {
+    "id": "77",
+    "title": "Coll★ision",
+    "students": ["アカネ", "ネル", "アスナ", "カリン"],
+    "href": "https://twitter.com/en_bluearchive/status/1646800667565260800"
   }
 ]
