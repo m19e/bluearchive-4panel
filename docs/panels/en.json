@@ -297,7 +297,7 @@
   },
   {
     "id": "49",
-    "title": "Lost & Found Zero",
+    "title": "Lost & Found ZERO",
     "students": ["カエデ", "ツバキ", "ミモリ", "イズナ"],
     "href": "https://twitter.com/en_bluearchive/status/1573235716469161985"
   },
@@ -489,5 +489,11 @@
     "title": "Coll★ision",
     "students": ["アカネ", "ネル", "アスナ", "カリン"],
     "href": "https://twitter.com/en_bluearchive/status/1646800667565260800"
+  },
+  {
+    "id": "78",
+    "title": "A Misunderstood Shadow",
+    "students": ["ヒナタ", "マリー", "コハル"],
+    "href": "https://twitter.com/en_bluearchive/status/1649337358612054016"
   }
 ]
