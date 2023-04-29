@@ -98,12 +98,12 @@ const terror: FandomStudentData = {
     club: null,
     school: "others_students",
   },
-  "A.R.O.N.A": {
+  "Plana": {
     id: "plana",
     ja: "プラナ",
     en: "Plana",
     club: "SCHALE",
-    school: "others_students",
+    school: "kivotos",
   },
 };
 
