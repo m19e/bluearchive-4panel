@@ -6,6 +6,13 @@
     "club": "SCHALE",
     "school": "kivotos"
   },
+  "プラナ": {
+    "id": "plana",
+    "ja": "プラナ",
+    "en": "Plana",
+    "club": "SCHALE",
+    "school": "kivotos"
+  },
   "ソラ": {
     "id": "sora",
     "ja": "ソラ",
@@ -258,11 +265,11 @@
     "club": null,
     "school": "others_students"
   },
-  "プラナ": {
-    "id": "plana",
-    "ja": "プラナ",
-    "en": "Plana",
-    "club": "SCHALE",
+  "アキラ": {
+    "id": "akira",
+    "ja": "アキラ",
+    "en": "Akira",
+    "club": null,
     "school": "others_students"
   }
 }
