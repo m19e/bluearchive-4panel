@@ -501,5 +501,22 @@
     "title": "It's No Big Deal",
     "students": ["マリー", "ハスミ"],
     "href": "https://twitter.com/en_bluearchive/status/1651874049218453504"
+  },
+  {
+    "id": "80",
+    "title": "Unfinished Business",
+    "students": [
+      "アコ",
+      "ハスミ",
+      "マリー",
+      "ハルナ",
+      "イズミ",
+      "ホシノ",
+      "セリカ",
+      "ノノミ",
+      "シロコ",
+      "ユウカ"
+    ],
+    "href": "https://twitter.com/en_bluearchive/status/1654410865712549888"
   }
 ]
