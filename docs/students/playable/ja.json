@@ -336,6 +336,12 @@
     "en": "Pina",
     "school": "hyakkiyako"
   },
+  "レイサ": {
+    "id": "reisa",
+    "ja": "レイサ",
+    "en": "Reisa",
+    "school": "trinity"
+  },
   "サキ": { "id": "saki", "ja": "サキ", "en": "Saki", "school": "srt" },
   "サクラコ": {
     "id": "sakurako",
