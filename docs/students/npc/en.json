@@ -25,42 +25,56 @@
     "ja": "連邦生徒会長",
     "en": "President",
     "club": "GSC",
-    "school": "prime_student_council"
+    "school": "general_student_council"
   },
   "rin": {
     "id": "rin",
     "ja": "リン",
     "en": "Rin",
     "club": "GSC",
-    "school": "prime_student_council"
+    "school": "general_student_council"
   },
   "momoka": {
     "id": "momoka",
     "ja": "モモカ",
     "en": "Momoka",
     "club": "GSC",
-    "school": "prime_student_council"
+    "school": "general_student_council"
   },
   "kaya": {
     "id": "kaya",
     "ja": "カヤ",
     "en": "Kaya",
     "club": "GSC",
-    "school": "prime_student_council"
+    "school": "general_student_council"
   },
   "ayumu": {
     "id": "ayumu",
     "ja": "アユム",
     "en": "Ayumu",
     "club": "GSC",
-    "school": "prime_student_council"
+    "school": "general_student_council"
   },
   "aoi": {
     "id": "aoi",
     "ja": "アオイ",
     "en": "Aoi",
     "club": "GSC",
-    "school": "prime_student_council"
+    "school": "general_student_council"
+  },
+  "haine": {
+    "id": "haine",
+    "ja": "ハイネ",
+    "en": "Haine",
+    "club": "GSC",
+    "school": "general_student_council"
+  },
+  "sumomo": {
+    "id": "sumomo",
+    "ja": "スモモ",
+    "en": "Sumomo",
+    "club": "GSC",
+    "school": "general_student_council"
   },
   "yume": {
     "id": "yume",
