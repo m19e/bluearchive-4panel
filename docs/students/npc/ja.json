@@ -167,26 +167,12 @@
     "club": "Xuanlong Office",
     "school": "shanhaijing"
   },
-  "ミナ": {
-    "id": "mina",
-    "ja": "ミナ",
-    "en": "Mina",
-    "club": "Xuanlong Office",
+  "レイジョ": {
+    "id": "reijo",
+    "ja": "レイジョ",
+    "en": "Reijo",
+    "club": "Xuanwu",
     "school": "shanhaijing"
-  },
-  "ルミ": {
-    "id": "rumi",
-    "ja": "ルミ",
-    "en": "Rumi",
-    "club": "Xuanwu Assoc.",
-    "school": "shanhaijing"
-  },
-  "ミノリ": {
-    "id": "minori",
-    "ja": "ミノリ",
-    "en": "Minori",
-    "club": "Public Works Dept",
-    "school": "red_winter"
   },
   "モミジ": {
     "id": "momiji",
