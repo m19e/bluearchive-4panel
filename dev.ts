@@ -26,7 +26,7 @@ const exceptions: Record<string, string> = {
   "Kanna": "カンナ",
   "Mari": "マリー",
   "Pina": "フィーナ",
-  "GSC President": "連邦生徒会長",
+  "President": "連邦生徒会長",
   "Master Shiba": "柴大将",
 };
 

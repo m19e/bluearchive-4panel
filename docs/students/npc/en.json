@@ -20,10 +20,10 @@
     "club": "Angel 24",
     "school": "kivotos"
   },
-  "gsc_president": {
-    "id": "gsc_president",
+  "president": {
+    "id": "president",
     "ja": "連邦生徒会長",
-    "en": "GSC President",
+    "en": "President",
     "club": "GSC",
     "school": "prime_student_council"
   },

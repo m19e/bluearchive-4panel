@@ -21,9 +21,9 @@
     "school": "kivotos"
   },
   "連邦生徒会長": {
-    "id": "gsc_president",
+    "id": "president",
     "ja": "連邦生徒会長",
-    "en": "GSC President",
+    "en": "President",
     "club": "GSC",
     "school": "prime_student_council"
   },
