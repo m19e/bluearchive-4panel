@@ -287,7 +287,14 @@
     "en": "Mimori",
     "school": "hyakkiyako"
   },
+  "ミナ": { "id": "mina", "ja": "ミナ", "en": "Mina", "school": "shanhaijing" },
   "ミネ": { "id": "mine", "ja": "ミネ", "en": "Mine", "school": "trinity" },
+  "ミノリ": {
+    "id": "minori",
+    "ja": "ミノリ",
+    "en": "Minori",
+    "school": "red_winter"
+  },
   "ミサキ": {
     "id": "misaki",
     "ja": "ミサキ",
@@ -342,6 +349,7 @@
     "en": "Reisa",
     "school": "trinity"
   },
+  "ルミ": { "id": "rumi", "ja": "ルミ", "en": "Rumi", "school": "shanhaijing" },
   "サキ": { "id": "saki", "ja": "サキ", "en": "Saki", "school": "srt" },
   "サクラコ": {
     "id": "sakurako",
