@@ -188,6 +188,13 @@
     "club": "Xuanwu",
     "school": "shanhaijing"
   },
+  "カイ": {
+    "id": "kai",
+    "ja": "カイ",
+    "en": "Kai",
+    "club": null,
+    "school": "shanhaijing"
+  },
   "モミジ": {
     "id": "momiji",
     "ja": "モミジ",
