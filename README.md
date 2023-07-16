@@ -7,6 +7,10 @@ Auto Update JSON for Blue Archive official 4-panel manga
 [![vr scripts](https://badges.velociraptor.run/flat.svg)](https://velociraptor.run)
 [![LICENSE](https://img.shields.io/badge/license-MIT-brightgreen)](LICENSE)
 
+## Recent Update
+
+- 2023/7/15 EN-90, JA-124
+
 ## JSON URL
 
 - https://m19e.github.io/bluearchive-4panel/panels/ja.json
