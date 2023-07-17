@@ -170,8 +170,8 @@ const getNPCsFromFandom = async () => {
     students = [...students, getStudentFromNode(node, currentSchool)];
   });
 
-  const filtered = students.filter(({ en, club }) =>
-    club !== "Gematria" && !(rejectEn[en])
+  const filtered = students.filter(({ en, club, school }) =>
+    school !== "other_characters" && !(rejectEn[en])
   );
 
   const en = filtered.reduce(
