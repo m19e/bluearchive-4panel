@@ -27,7 +27,6 @@ const exceptions: Record<string, string> = {
   "Mari": "マリー",
   "Pina": "フィーナ",
   "President": "連邦生徒会長",
-  "Master Shiba": "柴大将",
 };
 
 const getStudentKanaFromRoman = (roman: string) => {
@@ -116,6 +115,8 @@ const rejectEn: Record<string, string> = {
   "Phrenapates": "プレナパテス",
   "Nyanten-maru": "ニャン天丸",
   "Master Shiba": "柴大将",
+  "Barbara": "バルバラ",
+  "Owner of Suzume": "スズメ亭の女将",
 };
 
 const getSchoolFromNode = (node: Node) => {
