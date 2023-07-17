@@ -4,7 +4,7 @@
     "ja": "アロナ",
     "en": "Arona",
     "club": "SCHALE",
-    "school": "kivotos"
+    "school": "schale"
   },
   "plana": {
     "id": "plana",
@@ -18,7 +18,7 @@
     "ja": "ソラ",
     "en": "Sora",
     "club": "Angel 24",
-    "school": "kivotos"
+    "school": "angel_24"
   },
   "president": {
     "id": "president",
@@ -255,8 +255,8 @@
     "id": "rabu",
     "ja": "ラブ",
     "en": "Rabu",
-    "club": "Black Helmet",
-    "school": "others_students"
+    "club": "Gang Helmet",
+    "school": "other_student"
   },
   "shiroko_terror": {
     "id": "shiroko_terror",
@@ -270,6 +270,6 @@
     "ja": "アキラ",
     "en": "Akira",
     "club": null,
-    "school": "others_students"
+    "school": "other_student"
   }
 }
