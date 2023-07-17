@@ -9,7 +9,8 @@ Auto Update JSON for Blue Archive official 4-panel manga
 
 ## Recent Update
 
-- 2023/7/15 EN-90, JA-124
+- 2023/07/15 EN-90, JA-124
+- 2023/07/10 EN-89
 
 ## JSON URL
 
