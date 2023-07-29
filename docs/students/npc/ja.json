@@ -255,8 +255,15 @@
     "id": "rabu",
     "ja": "ラブ",
     "en": "Rabu",
-    "club": "Gang Helmet",
-    "school": "other_student"
+    "club": "Helmet Gang",
+    "school": "other_students"
+  },
+  "アキラ": {
+    "id": "akira",
+    "ja": "アキラ",
+    "en": "Akira",
+    "club": null,
+    "school": "other_students"
   },
   "シロコ＊テラー": {
     "id": "shiroko_terror",
@@ -264,12 +271,5 @@
     "en": "Shiroko Terror",
     "club": null,
     "school": "others_students"
-  },
-  "アキラ": {
-    "id": "akira",
-    "ja": "アキラ",
-    "en": "Akira",
-    "club": null,
-    "school": "other_student"
   }
 }
