@@ -102,7 +102,7 @@ const terror: FandomStudentData = {
     ja: "プラナ",
     en: "Plana",
     club: "SCHALE",
-    school: "kivotos",
+    school: "schale",
   },
 };
 
