@@ -97,13 +97,6 @@
     "club": "Pandemonium Society",
     "school": "gehenna"
   },
-  "カスミ": {
-    "id": "kasumi",
-    "ja": "カスミ",
-    "en": "Kasumi",
-    "club": "Hot Spring Dept",
-    "school": "gehenna"
-  },
   "エリカ": {
     "id": "erika",
     "ja": "エリカ",
@@ -130,13 +123,6 @@
     "ja": "セイア",
     "en": "Seia",
     "club": "Tea Party",
-    "school": "trinity"
-  },
-  "イチカ": {
-    "id": "ichika",
-    "ja": "イチカ",
-    "en": "Ichika",
-    "club": "Justice Committee",
     "school": "trinity"
   },
   "ニヤ": {
@@ -188,18 +174,18 @@
     "club": null,
     "school": "shanhaijing"
   },
-  "モミジ": {
-    "id": "momiji",
-    "ja": "モミジ",
-    "en": "Momiji",
-    "club": "Knowledge Liberation",
+  "タカネ": {
+    "id": "takane",
+    "ja": "タカネ",
+    "en": "Takane",
+    "club": "Publishing Department",
     "school": "red_winter"
   },
-  "メル": {
-    "id": "meru",
-    "ja": "メル",
-    "en": "Meru",
-    "club": "Knowledge Liberation",
+  "ヤクモ": {
+    "id": "yakumo",
+    "ja": "ヤクモ",
+    "en": "Yakumo",
+    "club": "Publishing Department",
     "school": "red_winter"
   },
   "ユキノ": {
