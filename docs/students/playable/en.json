@@ -155,6 +155,12 @@
     "en": "Hoshino",
     "school": "abydos"
   },
+  "ichika": {
+    "id": "ichika",
+    "ja": "イチカ",
+    "en": "Ichika",
+    "school": "trinity"
+  },
   "iori": { "id": "iori", "ja": "イオリ", "en": "Iori", "school": "gehenna" },
   "iroha": {
     "id": "iroha",
@@ -199,6 +205,12 @@
     "ja": "カリン",
     "en": "Karin",
     "school": "millennium"
+  },
+  "kasumi": {
+    "id": "kasumi",
+    "ja": "カスミ",
+    "en": "Kasumi",
+    "school": "gehenna"
   },
   "kayoko": {
     "id": "kayoko",
@@ -263,6 +275,7 @@
     "school": "trinity"
   },
   "megu": { "id": "megu", "ja": "メグ", "en": "Megu", "school": "gehenna" },
+  "meru": { "id": "meru", "ja": "メル", "en": "Meru", "school": "red_winter" },
   "michiru": {
     "id": "michiru",
     "ja": "ミチル",
@@ -299,6 +312,12 @@
   "miyako": { "id": "miyako", "ja": "ミヤコ", "en": "Miyako", "school": "srt" },
   "miyu": { "id": "miyu", "ja": "ミユ", "en": "Miyu", "school": "srt" },
   "moe": { "id": "moe", "ja": "モエ", "en": "Moe", "school": "srt" },
+  "momiji": {
+    "id": "momiji",
+    "ja": "モミジ",
+    "en": "Momiji",
+    "school": "red_winter"
+  },
   "momoi": {
     "id": "momoi",
     "ja": "モモイ",
