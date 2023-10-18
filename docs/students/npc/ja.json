@@ -13,6 +13,13 @@
     "club": "SCHALE",
     "school": "schale"
   },
+  "ソラ": {
+    "id": "sora",
+    "ja": "ソラ",
+    "en": "Sora",
+    "club": "Angel 24",
+    "school": "other_students"
+  },
   "連邦生徒会長": {
     "id": "president",
     "ja": "連邦生徒会長",
@@ -229,13 +236,6 @@
     "en": "Shinon",
     "club": "Kronos News Club",
     "school": "kronos"
-  },
-  "ソラ": {
-    "id": "sora",
-    "ja": "ソラ",
-    "en": "Sora",
-    "club": "Angel 24",
-    "school": "other_students"
   },
   "ラブ": {
     "id": "rabu",

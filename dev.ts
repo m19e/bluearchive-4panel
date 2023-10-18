@@ -90,6 +90,13 @@ const getCharacters = async () => {
 };
 
 const terror: FandomStudentData = {
+  "Sora": {
+    "id": "sora",
+    "ja": "ソラ",
+    "en": "Sora",
+    "club": "Angel 24",
+    "school": "other_students",
+  },
   "Shiroko Terror": {
     id: "shiroko_terror",
     ja: "シロコ＊テラー",
