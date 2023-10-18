@@ -322,7 +322,7 @@
   {
     "id": "53",
     "title": "The President's Height",
-    "students": ["マリナ"],
+    "students": ["マリナ", "ミノリ"],
     "href": "https://twitter.com/en_bluearchive/status/1583382662412050432"
   },
   {
@@ -614,5 +614,47 @@
     "title": "Mandatory Migration",
     "students": ["モモカ", "リン", "アユム", "アオイ"],
     "href": "https://twitter.com/en_bluearchive/status/1694998579759419647"
+  },
+  {
+    "id": "97",
+    "title": "Prepared Maid",
+    "students": ["アカネ", "カリン", "トキ"],
+    "href": "https://twitter.com/en_bluearchive/status/1697537673727234554"
+  },
+  {
+    "id": "98",
+    "title": "The Definition of Comfy",
+    "students": ["アヤネ", "セリカ", "ノノミ", "シロコ", "ホシノ"],
+    "href": "https://twitter.com/en_bluearchive/status/1700078586039005385"
+  },
+  {
+    "id": "99",
+    "title": "Out of Chances",
+    "students": ["コユキ", "ユウカ"],
+    "href": "https://twitter.com/en_bluearchive/status/1702608403850567781"
+  },
+  {
+    "id": "100",
+    "title": "Special",
+    "students": [],
+    "href": "https://twitter.com/en_bluearchive/status/1705148443734450532"
+  },
+  {
+    "id": "101",
+    "title": "Noise Canceling?",
+    "students": ["カヨコ", "アル"],
+    "href": "https://twitter.com/en_bluearchive/status/1707682406164251133"
+  },
+  {
+    "id": "102",
+    "title": "Guilt Spiral",
+    "students": ["ハルカ", "アル", "ムツキ", "カヨコ"],
+    "href": "https://twitter.com/en_bluearchive/status/1710218906932318360"
+  },
+  {
+    "id": "103",
+    "title": "Nin!",
+    "students": ["イズナ", "シズコ", "フィーナ"],
+    "href": "https://twitter.com/en_bluearchive/status/1712757991081177159"
   }
 ]
