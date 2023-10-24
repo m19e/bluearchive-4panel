@@ -26,7 +26,7 @@ scripts:
 
   update:
     desc: Update panels
-    cmd: main.ts && deno fmt docs
+    cmd: main.ts --lock=deno.lock --lock-write && deno fmt docs
     allow:
       - net
       - write
