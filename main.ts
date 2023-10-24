@@ -1,4 +1,3 @@
-import ky from "ky";
 import { DOMParser } from "dom";
 import type { Element } from "dom";
 
@@ -99,7 +98,7 @@ const getPanel = (
 const getPage = async (
   url: string,
 ) => {
-  const res = await ky(url);
+  const res = await fetch(url);
   const html = await getHtmlUtf8(res);
   const dom = new DOMParser().parseFromString(html, "text/html");
   if (!dom) {
