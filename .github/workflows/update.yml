@@ -15,7 +15,7 @@ jobs:
       - name: Run update
         env:
           VR_HOOKS: "false"
-        run: vr update
+        run: deno cache --reload main.ts && vr update
       - name: Commit the changes
         uses: stefanzweifel/git-auto-commit-action@v4
         with:
