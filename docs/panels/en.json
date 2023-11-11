@@ -674,5 +674,11 @@
     "title": "Cat+Maid",
     "students": ["アリス", "モモイ", "ミドリ", "ユズ"],
     "href": "https://twitter.com/en_bluearchive/status/1720365638349447480"
+  },
+  {
+    "id": "107",
+    "title": "Rock, Paper, Scissors",
+    "students": ["トキ", "ユズ", "モモイ", "ミドリ", "アリス"],
+    "href": "https://twitter.com/en_bluearchive/status/1722906408545554640"
   }
 ]
