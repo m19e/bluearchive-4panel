@@ -692,5 +692,11 @@
     "title": "Egghead",
     "students": ["マシロ", "ヒフミ", "アズサ"],
     "href": "https://twitter.com/en_bluearchive/status/1727978563058712838"
+  },
+  {
+    "id": "110",
+    "title": "Golden Fried Rice",
+    "students": ["サヤ", "ルミ", "レイジョ", "ミナ"],
+    "href": "https://twitter.com/en_bluearchive/status/1730512221481189711"
   }
 ]
