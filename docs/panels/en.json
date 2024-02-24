@@ -761,8 +761,14 @@
   },
   {
     "id": "121",
-    "title": "Refined Librarian",
+    "title": "Gardening Lessons",
     "students": ["ヒビキ", "コトリ", "スミレ", "ウタハ"],
     "href": "https://twitter.com/en_bluearchive/status/1758419624163762597"
+  },
+  {
+    "id": "122",
+    "title": "Careful Observation",
+    "students": ["ミモリ", "イズナ"],
+    "href": "https://twitter.com/en_bluearchive/status/1760952849926856879"
   }
 ]
