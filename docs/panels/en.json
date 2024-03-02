@@ -770,5 +770,11 @@
     "title": "Careful Observation",
     "students": ["ミモリ", "イズナ"],
     "href": "https://twitter.com/en_bluearchive/status/1760952849926856879"
+  },
+  {
+    "id": "123",
+    "title": "Theme Showdown",
+    "students": ["メル", "モミジ", "ヤクモ"],
+    "href": "https://twitter.com/en_bluearchive/status/1763490704402378827"
   }
 ]
