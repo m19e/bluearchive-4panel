@@ -973,5 +973,11 @@
     "title": "最新の流行語",
     "students": ["ヒナタ", "サクラコ"],
     "href": "https://twitter.com/blue_archivejp/status/1771024086472532322"
+  },
+  {
+    "id": "161",
+    "title": "ツバキの秘術（？）",
+    "students": ["ツバキ", "フィーナ", "ウミカ"],
+    "href": "https://twitter.com/blue_archivejp/status/1773560761807413677"
   }
 ]
