@@ -989,7 +989,7 @@
   {
     "id": "163",
     "title": "音楽の趣味",
-    "students": ["カズサ", "レンゲ"],
+    "students": ["カズサ", "レイサ"],
     "href": "https://twitter.com/blue_archivejp/status/1778634233457918443"
   },
   {
@@ -997,5 +997,17 @@
     "title": "マッサージ",
     "students": ["ノア", "ユウカ", "コユキ"],
     "href": "https://twitter.com/blue_archivejp/status/1781170918070595585"
+  },
+  {
+    "id": "165",
+    "title": "プリンとは！",
+    "students": ["カズサ", "ヨシミ", "アイリ", "ナツ"],
+    "href": "https://twitter.com/blue_archivejp/status/1783707676746338594"
+  },
+  {
+    "id": "166",
+    "title": "青春の輪",
+    "students": ["アイリ", "ヨシミ", "カズサ", "ナツ"],
+    "href": "https://twitter.com/blue_archivejp/status/1786244386944434227"
   }
 ]
