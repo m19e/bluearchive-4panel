@@ -836,5 +836,11 @@
     "title": "Engineering Department",
     "students": ["コトリ", "ヒビキ", "ウタハ"],
     "href": "https://twitter.com/en_bluearchive/status/1788859744373096940"
+  },
+  {
+    "id": "134",
+    "title": "Youth 4 Cuts",
+    "students": ["レンゲ", "ユカリ"],
+    "href": "https://twitter.com/en_bluearchive/status/1791393457719971906"
   }
 ]
