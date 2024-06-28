@@ -872,5 +872,11 @@
     "title": "No Admission",
     "students": ["アスナ", "ネル", "アカネ", "トキ", "カリン"],
     "href": "https://twitter.com/en_bluearchive/status/1804079643722682697"
+  },
+  {
+    "id": "140",
+    "title": "Emergency!",
+    "students": ["コタマ", "ハレ", "マキ", "チヒロ"],
+    "href": "https://twitter.com/en_bluearchive/status/1806615397820440974"
   }
 ]
