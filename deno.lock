@@ -1,5 +1,5 @@
 {
-  "version": "2",
+  "version": "4",
   "remote": {
     "https://deno.land/x/deno_dom@v0.1.37/build/deno-wasm/deno-wasm.js": "98b1ad24a1c13284557917659402202e5c5258ab1431b3f3a82434ad36ffa05a",
     "https://deno.land/x/deno_dom@v0.1.37/deno-dom-wasm.ts": "bfd999a493a6974e9fca4d331bee03bfb68cfc600c662cd0b48b21d67a2a8ba0",
@@ -23,18 +23,7 @@
     "https://deno.land/x/deno_dom@v0.1.37/src/dom/utils-types.ts": "96db30e3e4a75b194201bb9fa30988215da7f91b380fca6a5143e51ece2a8436",
     "https://deno.land/x/deno_dom@v0.1.37/src/dom/utils.ts": "2e816a54f243d2f7e2e3616d1551b43a46c34f67995a321490aa94e424bb7a20",
     "https://deno.land/x/deno_dom@v0.1.37/src/parser.ts": "b65eb7e673fa7ca611de871de109655f0aa9fa35ddc1de73df1a5fc2baafc332",
-    "https://esm.sh/ky@1.1.0": "c32472773ec775003e6d4b0e92e23a65326b4599aab9b6e1acf6adc0de239a70",
-    "https://esm.sh/v133/ky@1.1.0/deno/ky.mjs": "5ab523323d2df101107c1fa0163bfae21f9c7d83cf5f02d2a62b2fa9b445d7de",
-    "https://esm.sh/v133/ky@1.1.0/distribution/core/constants.d.ts": "9c23fb2acd5ed818c950c6802b22cafde46f1cd6217898ca4f0f726558576f48",
-    "https://esm.sh/v133/ky@1.1.0/distribution/errors/HTTPError.d.ts": "bec5524c0d8addd2e4d678b14434976fad37b83bacffa3ae65d14afe71a76e83",
-    "https://esm.sh/v133/ky@1.1.0/distribution/errors/TimeoutError.d.ts": "162f748e98203b829d8505f499c99ee0fc2200c11f3743d0e7124e7bf8ca253c",
-    "https://esm.sh/v133/ky@1.1.0/distribution/index.d.ts": "33e8773cbec165d42ba5b39476f2293cd0506a345cd7c2f706ab4b9c452479b5",
-    "https://esm.sh/v133/ky@1.1.0/distribution/types/ResponsePromise.d.ts": "81dfc5cae3a5c919be4cbfdd983ceef5197a7724d366cb70852858c2754e8261",
-    "https://esm.sh/v133/ky@1.1.0/distribution/types/common.d.ts": "20fcb118bebfb69ca52595ac4f0dd500fe457a5cedb0a4186a3b09cb20aad7c7",
-    "https://esm.sh/v133/ky@1.1.0/distribution/types/hooks.d.ts": "283c580d29be18e9f31d7138d9c45fd0b1a2b3e173e0cfc35d73ce06d3ff99db",
-    "https://esm.sh/v133/ky@1.1.0/distribution/types/ky.d.ts": "1b9ce8db17ecc94cd9d465e27a11f5923788357da2495033ec1cafa852c1579c",
-    "https://esm.sh/v133/ky@1.1.0/distribution/types/options.d.ts": "5f0b2dbab87a4206c73c895e97a387095f2e8a88ac0a1f9b4d861ef14b994bb6",
-    "https://esm.sh/v133/ky@1.1.0/distribution/types/response.d.ts": "53a99a92d30403695d814cd721864111f9947dae08655a2123bb2b3f13a4f9f3",
-    "https://esm.sh/v133/ky@1.1.0/distribution/types/retry.d.ts": "55c63138be10c2ea67afb04f6ac90ec4ad9ab5516ae0df1187d54427a6f0a82d"
+    "https://esm.sh/ky@1.1.0": "3269afc47a9aedfd9cba83b4b3310dde8c182ec639a69819bfaacf17e80e8a23",
+    "https://esm.sh/v135/ky@1.1.0/denonext/ky.mjs": "f5d5eb22d8a075b6d4c40e8d0a2a72b6d0c50d04bac17171a3842ccb9dfeab52"
   }
 }
