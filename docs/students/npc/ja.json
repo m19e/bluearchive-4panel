@@ -41,17 +41,17 @@
     "club": "GSC",
     "school": "general_student_council"
   },
-  "アユム": {
-    "id": "ayumu",
-    "ja": "アユム",
-    "en": "Ayumu",
-    "club": "GSC",
-    "school": "general_student_council"
-  },
   "カヤ": {
     "id": "kaya",
     "ja": "カヤ",
     "en": "Kaya",
+    "club": "GSC",
+    "school": "general_student_council"
+  },
+  "アユム": {
+    "id": "ayumu",
+    "ja": "アユム",
+    "en": "Ayumu",
     "club": "GSC",
     "school": "general_student_council"
   },
@@ -83,13 +83,6 @@
     "club": "Abydos Student Council",
     "school": "abydos"
   },
-  "マコト": {
-    "id": "makoto",
-    "ja": "マコト",
-    "en": "Makoto",
-    "club": "Pandemonium Society",
-    "school": "gehenna"
-  },
   "サツキ": {
     "id": "satsuki",
     "ja": "サツキ",
@@ -97,10 +90,10 @@
     "club": "Pandemonium Society",
     "school": "gehenna"
   },
-  "イブキ": {
-    "id": "ibuki",
-    "ja": "イブキ",
-    "en": "Ibuki",
+  "チアキ": {
+    "id": "chiaki",
+    "ja": "チアキ",
+    "en": "Chiaki",
     "club": "Pandemonium Society",
     "school": "gehenna"
   },
@@ -111,18 +104,18 @@
     "club": null,
     "school": "gehenna"
   },
-  "キララ": {
-    "id": "kirara",
-    "ja": "キララ",
-    "en": "Kirara",
-    "club": null,
-    "school": "gehenna"
-  },
   "リオ": {
     "id": "rio",
     "ja": "リオ",
     "en": "Rio",
     "club": "Seminar",
+    "school": "millennium"
+  },
+  "レイ": {
+    "id": "rei",
+    "ja": "レイ",
+    "en": "Rei",
+    "club": "Gym Training Dept.",
     "school": "millennium"
   },
   "セイア": {
@@ -139,6 +132,13 @@
     "club": "Yin-Yang Club",
     "school": "hyakkiyako"
   },
+  "アヤメ": {
+    "id": "ayame",
+    "ja": "アヤメ",
+    "en": "Ayame",
+    "club": "Hyakkaryouran",
+    "school": "hyakkiyako"
+  },
   "ナグサ": {
     "id": "nagusa",
     "ja": "ナグサ",
@@ -146,11 +146,25 @@
     "club": "Hyakkaryouran",
     "school": "hyakkiyako"
   },
-  "ウミカ": {
-    "id": "umika",
-    "ja": "ウミカ",
-    "en": "Umika",
-    "club": "Festival Mgt Committee",
+  "アラタ": {
+    "id": "arata",
+    "ja": "アラタ",
+    "en": "Arata",
+    "club": "Street Ghost",
+    "school": "hyakkiyako"
+  },
+  "コクリコ": {
+    "id": "kokuriko",
+    "ja": "コクリコ",
+    "en": "Kokuriko",
+    "club": "Nature's Beauty",
+    "school": "hyakkiyako"
+  },
+  "シュロ": {
+    "id": "shuro",
+    "ja": "シュロ",
+    "en": "Shuro",
+    "club": "Nature's Beauty",
     "school": "hyakkiyako"
   },
   "クズノハ": {
@@ -160,40 +174,40 @@
     "club": null,
     "school": "hyakkiyako"
   },
-  "キサキ": {
-    "id": "kisaki",
-    "ja": "キサキ",
-    "en": "Kisaki",
-    "club": "Xuanlong Office",
-    "school": "shanhaijing"
-  },
-  "レイジョ": {
-    "id": "reijo",
-    "ja": "レイジョ",
-    "en": "Reijo",
-    "club": "Xuanwu",
-    "school": "shanhaijing"
-  },
   "カイ": {
     "id": "kai",
     "ja": "カイ",
     "en": "Kai",
-    "club": null,
+    "club": "Seven Prisoners",
+    "school": "shanhaijing"
+  },
+  "カグヤ": {
+    "id": "kaguya",
+    "ja": "カグヤ",
+    "en": "Kaguya",
+    "club": "Peking Opera Club",
     "school": "shanhaijing"
   },
   "タカネ": {
     "id": "takane",
     "ja": "タカネ",
     "en": "Takane",
-    "club": "Publishing Department",
+    "club": "Publishing Dept.",
     "school": "red_winter"
   },
   "ヤクモ": {
     "id": "yakumo",
     "ja": "ヤクモ",
     "en": "Yakumo",
-    "club": "Publishing Department",
+    "club": "Publishing Dept.",
     "school": "red_winter"
+  },
+  "コノカ": {
+    "id": "konoka",
+    "ja": "コノカ",
+    "en": "Konoka",
+    "club": "Public Security Bureau",
+    "school": "valkyrie"
   },
   "ユキノ": {
     "id": "yukino",
