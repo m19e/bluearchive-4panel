@@ -1,6 +1,6 @@
-import jaPanels from "/docs/panels/ja.json" assert { type: "json" };
-import enPanels from "/docs/panels/en.json" assert { type: "json" };
-import aoharuPanels from "/docs/panels/aoharu.json" assert { type: "json" };
+import jaPanels from "/docs/panels/ja.json" with { type: "json" };
+import enPanels from "/docs/panels/en.json" with { type: "json" };
+import aoharuPanels from "/docs/panels/aoharu.json" with { type: "json" };
 
 import { Panel } from "/types/panel.ts";
 
