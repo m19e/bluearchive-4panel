@@ -27,6 +27,7 @@ const exceptions: Record<string, string> = {
   "Mari": "マリー",
   "Pina": "フィーナ",
   "President": "連邦生徒会長",
+  "Shiroko＊Terror": "シロコ＊テラー",
 };
 
 const getStudentKanaFromRoman = (roman: string) => {
@@ -52,7 +53,7 @@ const getCharacters = async () => {
   }
 
   const tbody = dom.querySelector("tbody")!;
-  const count = tbody?.querySelectorAll("tr")!.length;
+  const count = tbody?.querySelectorAll("tr").length;
   const students = [...Array(count - 1)].map((_, index) => {
     const n = index + 2;
     const name = tbody.querySelector(
@@ -96,13 +97,6 @@ const terror: FandomStudentData = {
     "en": "Sora",
     "club": "Angel 24",
     "school": "other_students",
-  },
-  "Shiroko Terror": {
-    id: "shiroko_terror",
-    ja: "シロコ＊テラー",
-    en: "Shiroko Terror",
-    club: null,
-    school: "others_students",
   },
   "Plana": {
     id: "plana",
