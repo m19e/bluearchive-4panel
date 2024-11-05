@@ -172,7 +172,8 @@ const getNPCsFromFandom = async () => {
   });
 
   const filtered = students.filter(({ en, club, school }) =>
-    school !== "other_characters" && !(rejectEn[en])
+    school !== "other_characters" &&
+    school !== "other_non-student_characters" && !(rejectEn[en])
   );
 
   const en = filtered.reduce(
