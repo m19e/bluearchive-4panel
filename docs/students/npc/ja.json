@@ -248,14 +248,14 @@
     "id": "akira",
     "ja": "アキラ",
     "en": "Akira",
-    "club": null,
+    "club": "Seven Prisoners",
     "school": "other_students"
   },
-  "シロコ＊テラー": {
-    "id": "shiroko_terror",
-    "ja": "シロコ＊テラー",
-    "en": "Shiroko Terror",
-    "club": null,
-    "school": "others_students"
+  "アケミ": {
+    "id": "akemi",
+    "ja": "アケミ",
+    "en": "Akemi",
+    "club": "Seven Prisoners",
+    "school": "other_students"
   }
 }

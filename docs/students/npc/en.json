@@ -251,11 +251,11 @@
     "club": null,
     "school": "other_students"
   },
-  "shiroko_terror": {
-    "id": "shiroko_terror",
-    "ja": "シロコ＊テラー",
-    "en": "Shiroko Terror",
-    "club": null,
-    "school": "others_students"
+  "akemi": {
+    "id": "akemi",
+    "ja": "アケミ",
+    "en": "Akemi",
+    "club": "Seven Prisoners",
+    "school": "other_students"
   }
 }
