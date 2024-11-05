@@ -251,6 +251,34 @@
     "club": "Kronos News Club",
     "school": "kronos"
   },
+  "hikari": {
+    "id": "hikari",
+    "ja": "ヒカリ",
+    "en": "Hikari",
+    "club": "Central Control Center",
+    "school": "highlander"
+  },
+  "nozomi": {
+    "id": "nozomi",
+    "ja": "ノゾミ",
+    "en": "Nozomi",
+    "club": "Central Control Center",
+    "school": "highlander"
+  },
+  "suou": {
+    "id": "suou",
+    "ja": "スオウ",
+    "en": "Suou",
+    "club": "Highlander Supervision Office",
+    "school": "highlander"
+  },
+  "tsumugi": {
+    "id": "tsumugi",
+    "ja": "ツムギ",
+    "en": "Tsumugi",
+    "club": null,
+    "school": "wild_hunt"
+  },
   "rabu": {
     "id": "rabu",
     "ja": "ラブ",
