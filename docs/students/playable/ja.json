@@ -160,6 +160,12 @@
     "en": "Hoshino",
     "school": "abydos"
   },
+  "イブキ": {
+    "id": "ibuki",
+    "ja": "イブキ",
+    "en": "Ibuki",
+    "school": "gehenna"
+  },
   "イチカ": {
     "id": "ichika",
     "ja": "イチカ",
@@ -229,11 +235,29 @@
     "en": "Kazusa",
     "school": "trinity"
   },
+  "キキョウ": {
+    "id": "kikyou",
+    "ja": "キキョウ",
+    "en": "Kikyou",
+    "school": "hyakkiyako"
+  },
+  "キララ": {
+    "id": "kirara",
+    "ja": "キララ",
+    "en": "Kirara",
+    "school": "gehenna"
+  },
   "キリノ": {
     "id": "kirino",
     "ja": "キリノ",
     "en": "Kirino",
     "school": "valkyrie"
+  },
+  "キサキ": {
+    "id": "kisaki",
+    "ja": "キサキ",
+    "en": "Kisaki",
+    "school": "shanhaijing"
   },
   "コハル": {
     "id": "koharu",
@@ -266,6 +290,12 @@
     "school": "millennium"
   },
   "マキ": { "id": "maki", "ja": "マキ", "en": "Maki", "school": "millennium" },
+  "マコト": {
+    "id": "makoto",
+    "ja": "マコト",
+    "en": "Makoto",
+    "school": "gehenna"
+  },
   "マリー": { "id": "mari", "ja": "マリー", "en": "Mari", "school": "trinity" },
   "マリナ": {
     "id": "marina",
@@ -362,11 +392,23 @@
     "en": "Pina",
     "school": "hyakkiyako"
   },
+  "レイジョ": {
+    "id": "reijo",
+    "ja": "レイジョ",
+    "en": "Reijo",
+    "school": "shanhaijing"
+  },
   "レイサ": {
     "id": "reisa",
     "ja": "レイサ",
     "en": "Reisa",
     "school": "trinity"
+  },
+  "レンゲ": {
+    "id": "renge",
+    "ja": "レンゲ",
+    "en": "Renge",
+    "school": "hyakkiyako"
   },
   "ルミ": { "id": "rumi", "ja": "ルミ", "en": "Rumi", "school": "shanhaijing" },
   "サキ": { "id": "saki", "ja": "サキ", "en": "Saki", "school": "srt" },
@@ -471,6 +513,12 @@
     "school": "trinity"
   },
   "ウイ": { "id": "ui", "ja": "ウイ", "en": "Ui", "school": "trinity" },
+  "ウミカ": {
+    "id": "umika",
+    "ja": "ウミカ",
+    "en": "Umika",
+    "school": "hyakkiyako"
+  },
   "ウタハ": {
     "id": "utaha",
     "ja": "ウタハ",
@@ -488,6 +536,12 @@
     "ja": "ヨシミ",
     "en": "Yoshimi",
     "school": "trinity"
+  },
+  "ユカリ": {
+    "id": "yukari",
+    "ja": "ユカリ",
+    "en": "Yukari",
+    "school": "hyakkiyako"
   },
   "ユウカ": {
     "id": "yuuka",

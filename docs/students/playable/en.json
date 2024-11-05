@@ -155,6 +155,12 @@
     "en": "Hoshino",
     "school": "abydos"
   },
+  "ibuki": {
+    "id": "ibuki",
+    "ja": "イブキ",
+    "en": "Ibuki",
+    "school": "gehenna"
+  },
   "ichika": {
     "id": "ichika",
     "ja": "イチカ",
@@ -224,11 +230,29 @@
     "en": "Kazusa",
     "school": "trinity"
   },
+  "kikyou": {
+    "id": "kikyou",
+    "ja": "キキョウ",
+    "en": "Kikyou",
+    "school": "hyakkiyako"
+  },
+  "kirara": {
+    "id": "kirara",
+    "ja": "キララ",
+    "en": "Kirara",
+    "school": "gehenna"
+  },
   "kirino": {
     "id": "kirino",
     "ja": "キリノ",
     "en": "Kirino",
     "school": "valkyrie"
+  },
+  "kisaki": {
+    "id": "kisaki",
+    "ja": "キサキ",
+    "en": "Kisaki",
+    "school": "shanhaijing"
   },
   "koharu": {
     "id": "koharu",
@@ -261,6 +285,12 @@
     "school": "millennium"
   },
   "maki": { "id": "maki", "ja": "マキ", "en": "Maki", "school": "millennium" },
+  "makoto": {
+    "id": "makoto",
+    "ja": "マコト",
+    "en": "Makoto",
+    "school": "gehenna"
+  },
   "mari": { "id": "mari", "ja": "マリー", "en": "Mari", "school": "trinity" },
   "marina": {
     "id": "marina",
@@ -357,11 +387,23 @@
     "en": "Pina",
     "school": "hyakkiyako"
   },
+  "reijo": {
+    "id": "reijo",
+    "ja": "レイジョ",
+    "en": "Reijo",
+    "school": "shanhaijing"
+  },
   "reisa": {
     "id": "reisa",
     "ja": "レイサ",
     "en": "Reisa",
     "school": "trinity"
+  },
+  "renge": {
+    "id": "renge",
+    "ja": "レンゲ",
+    "en": "Renge",
+    "school": "hyakkiyako"
   },
   "rumi": { "id": "rumi", "ja": "ルミ", "en": "Rumi", "school": "shanhaijing" },
   "saki": { "id": "saki", "ja": "サキ", "en": "Saki", "school": "srt" },
@@ -466,6 +508,12 @@
     "school": "trinity"
   },
   "ui": { "id": "ui", "ja": "ウイ", "en": "Ui", "school": "trinity" },
+  "umika": {
+    "id": "umika",
+    "ja": "ウミカ",
+    "en": "Umika",
+    "school": "hyakkiyako"
+  },
   "utaha": {
     "id": "utaha",
     "ja": "ウタハ",
@@ -483,6 +531,12 @@
     "ja": "ヨシミ",
     "en": "Yoshimi",
     "school": "trinity"
+  },
+  "yukari": {
+    "id": "yukari",
+    "ja": "ユカリ",
+    "en": "Yukari",
+    "school": "hyakkiyako"
   },
   "yuuka": {
     "id": "yuuka",
