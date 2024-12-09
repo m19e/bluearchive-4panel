@@ -7,8 +7,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@master
-      - uses: denoland/setup-deno@v1
-      - uses: jurassiscripts/setup-velociraptor@v1
+      - uses: denoland/setup-deno@v2
+      - uses: jurassiscripts/setup-velociraptor@v2
       - name: Create env file
         run: |
           touch .env
