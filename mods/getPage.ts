@@ -68,11 +68,18 @@ const getPanelCanDeleted = (body: Element, index: number): Partial<Panel> => {
 
     const h2 = body.querySelector(`h2#content_1_${index}`)?.textContent!;
     const { id, title } = parseJaTitle(h2);
-    const students = [
-        ...body.querySelectorAll(`#rgn_description${index} > p > a`),
-    ].map((node) => node.textContent);
-    const href = body.querySelector(`#rgn_content${index} > blockquote > a`)
+
+    const deletedIndex = index - 1;
+
+    const containerElement = body.querySelectorAll(
+        `#body .rgn-container`,
+    )[deletedIndex] as Element;
+
+    const href = containerElement.querySelector(".rgn-content > blockquote > a")
         ?.getAttribute("href") ?? undefined;
+    const students = [
+        ...containerElement.querySelectorAll(".rgn-description a"),
+    ].map((node) => node.textContent);
 
     return { id, title, students, href };
 };
@@ -82,20 +89,17 @@ const getPanel = (
     index: number,
     options: { isEnglish: boolean },
 ): Partial<Panel> => {
-    const h2 = body.querySelector(`h2#content_1_${index}`);
-    const h2Text = h2?.textContent!;
+    const h2 = body.querySelector(`h2#content_1_${index}`)?.textContent!;
     const { id, title } = options.isEnglish
-        ? parseEnTitle(h2Text)
-        : parseJaTitle(h2Text);
+        ? parseEnTitle(h2)
+        : parseJaTitle(h2);
 
     const containerElement = body.querySelectorAll(
         `#body .rgn-container`,
     )[index] as Element;
-
     const students = [
         ...containerElement.querySelectorAll(".rgn-description a"),
     ].map((node) => node.textContent);
-
     const href = containerElement.querySelector(".rgn-content > blockquote > a")
         ?.getAttribute("href") ?? undefined;
 
