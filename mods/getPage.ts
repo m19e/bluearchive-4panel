@@ -82,26 +82,27 @@ const getPanel = (
     index: number,
     options: { isEnglish: boolean },
 ): Partial<Panel> => {
-    const rgn = index + 1;
-
     const h2 = body.querySelector(`h2#content_1_${index}`);
     const h2Text = h2?.textContent!;
     const { id, title } = options.isEnglish
         ? parseEnTitle(h2Text)
         : parseJaTitle(h2Text);
+
+    const containerElement = body.querySelectorAll(
+        `#body .rgn-container`,
+    )[index] as Element;
+
     const students = [
-        ...(body.querySelectorAll(
-            `#body .rgn-container > .rgn-description`,
-        )[index] as Element).querySelectorAll("a"),
+        ...containerElement.querySelectorAll(".rgn-description a"),
     ].map((node) => node.textContent);
 
-    const href = body.querySelector(`#rgn_content${rgn} > blockquote > a`)
+    const href = containerElement.querySelector(".rgn-content > blockquote > a")
         ?.getAttribute("href") ?? undefined;
 
     return { id, title, students, href };
 };
 
-const getPage = async (
+export const getPage = async (
     url: string,
 ) => {
     const res = await fetch(url);
