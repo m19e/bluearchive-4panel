@@ -6,6 +6,7 @@
     "/consts/": "./consts/",
     "/types/": "./types/",
     "/utils/": "./utils/",
+    "/mods/": "./mods/",
     "/docs/": "./docs/"
   }
 }
