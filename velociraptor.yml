@@ -38,6 +38,13 @@ scripts:
       - net
       - write
 
+  demo:
+    desc: Debug new get-page process
+    cmd: mods/getPage.ts && deno fmt docs
+    allow:
+      - net
+      - write
+
 
   deps:
     desc: Update dependencies with ensuring pass tests
