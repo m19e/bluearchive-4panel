@@ -141,7 +141,7 @@ export const getPage = async (
     return { panels, nextUrl };
 };
 
-const { panels, nextUrl } = await getPage(
-    "https://bluearchive.wikiru.jp/?Twitter%E9%80%A3%E8%BC%89/%E3%81%B6%E3%82%8B%E3%83%BC%E3%81%82%E3%83%BC%E3%81%8B%E3%81%84%E3%81%B6%E3%81%A3%EF%BC%81/191%EF%BD%9E200",
-);
-await writeJSON("docs/debug.json", panels);
+// const { panels, nextUrl } = await getPage(
+//     "https://bluearchive.wikiru.jp/?Twitter%E9%80%A3%E8%BC%89/%E3%81%B6%E3%82%8B%E3%83%BC%E3%81%82%E3%83%BC%E3%81%8B%E3%81%84%E3%81%B6%E3%81%A3%EF%BC%81/191%EF%BD%9E200",
+// );
+// await writeJSON("docs/debug.json", panels);
