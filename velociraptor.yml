@@ -58,10 +58,10 @@ scripts:
     desc: Runs format
     cmd: deno fmt --ignore=cov_profile
 
-  # pre-commit:
-  #   cmd: sh .git-hooks/pre-commit
-  #   desc: Lints and formats staged files
-  #   gitHook: pre-commit
+  pre-commit:
+    cmd: sh .git-hooks/pre-commit
+    desc: Lints and formats staged files
+    gitHook: pre-commit
 
   test:
     desc: Runs the tests
