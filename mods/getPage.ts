@@ -61,6 +61,22 @@ const parseEnTitle = (original: string) => {
   return { id, title: title || "No Title" };
 };
 
+const getPanelContents = (
+  { body, index }: { body: Element; index: number },
+) => {
+  const container = body.querySelectorAll(
+    `#body .rgn-container`,
+  )[index] as Element;
+
+  const students = [
+    ...container.querySelectorAll(".rgn-description a"),
+  ].map((node) => node.textContent);
+  const href = container.querySelector(".rgn-content > blockquote > a")
+    ?.getAttribute("href") ?? undefined;
+
+  return { students, href };
+};
+
 const getPanelCanDeleted = (body: Element, index: number): Partial<Panel> => {
   if (index === 0) {
     return deletedPanel;
@@ -70,16 +86,10 @@ const getPanelCanDeleted = (body: Element, index: number): Partial<Panel> => {
   const { id, title } = parseJaTitle(h2);
 
   const containerIndex = index - 1;
-
-  const containerElement = body.querySelectorAll(
-    `#body .rgn-container`,
-  )[containerIndex] as Element;
-
-  const href = containerElement.querySelector(".rgn-content > blockquote > a")
-    ?.getAttribute("href") ?? undefined;
-  const students = [
-    ...containerElement.querySelectorAll(".rgn-description a"),
-  ].map((node) => node.textContent);
+  const { students, href } = getPanelContents({
+    body,
+    index: containerIndex,
+  });
 
   return { id, title, students, href };
 };
@@ -92,14 +102,10 @@ const getPanel = (
   const h2 = body.querySelector(`h2#content_1_${index}`)?.textContent!;
   const { id, title } = options.isEnglish ? parseEnTitle(h2) : parseJaTitle(h2);
 
-  const containerElement = body.querySelectorAll(
-    `#body .rgn-container`,
-  )[index] as Element;
-  const students = [
-    ...containerElement.querySelectorAll(".rgn-description a"),
-  ].map((node) => node.textContent);
-  const href = containerElement.querySelector(".rgn-content > blockquote > a")
-    ?.getAttribute("href") ?? undefined;
+  const { students, href } = getPanelContents({
+    body,
+    index,
+  });
 
   return { id, title, students, href };
 };
