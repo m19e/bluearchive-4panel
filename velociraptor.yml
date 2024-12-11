@@ -45,7 +45,6 @@ scripts:
       - net
       - write
 
-
   deps:
     desc: Update dependencies with ensuring pass tests
     cmd: udd import_map.json --test="vr test"
@@ -82,8 +81,8 @@ scripts:
       - vr test
 
   commitlint:
-    # dependencies: commitlint and @commitlint/config-conventional
-    # yarn global add commitlint @commitlint/config-conventional
-    # desc: Checks commit messages format with commitlint
-    # cmd: commitlint -x @commitlint/config-conventional -e ${GIT_ARGS[1]}
-    # gitHook: commit-msg
+# dependencies: commitlint and @commitlint/config-conventional
+# yarn global add commitlint @commitlint/config-conventional
+# desc: Checks commit messages format with commitlint
+# cmd: commitlint -x @commitlint/config-conventional -e ${GIT_ARGS[1]}
+# gitHook: commit-msg
