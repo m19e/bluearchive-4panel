@@ -29,6 +29,7 @@ const parseJaTitle = (original: string) => {
   const title = other.join(" ") || "無題";
   return { id, title };
 };
+
 const en1stPanel = {
   "id": "10001",
   "title": "1st Anniversary Special Episode",
@@ -140,7 +141,7 @@ export const getPage = async (
   const nextHref = nextAnchor.getAttribute("href") ?? "";
   const nextUrl = new URL(nextHref, BASE_URL).href;
 
-  await sleep(1000);
+  await sleep(500);
 
   return { panels, nextUrl };
 };
