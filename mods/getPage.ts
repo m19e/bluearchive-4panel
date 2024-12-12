@@ -62,8 +62,13 @@ const parseEnTitle = (original: string) => {
   return { id, title: title || "No Title" };
 };
 
+type GetPanelArgs = {
+  body: Element;
+  index: number;
+};
+
 const getPanelContents = (
-  { body, index }: { body: Element; index: number },
+  { body, index }: GetPanelArgs,
 ) => {
   const container = body.querySelectorAll(
     `#body .rgn-container`,
@@ -78,7 +83,7 @@ const getPanelContents = (
   return { students, href };
 };
 
-const getPanelCanDeleted = (body: Element, index: number): Partial<Panel> => {
+const getPanelCanDeleted = ({ body, index }: GetPanelArgs): Partial<Panel> => {
   if (index === 0) {
     return deletedPanel;
   }
@@ -96,12 +101,10 @@ const getPanelCanDeleted = (body: Element, index: number): Partial<Panel> => {
 };
 
 const getPanel = (
-  body: Element,
-  index: number,
-  options: { isEnglish: boolean },
+  { body, index, isEnglish }: GetPanelArgs & { isEnglish: boolean },
 ): Partial<Panel> => {
   const h2 = body.querySelector(`h2#content_1_${index}`)?.textContent!;
-  const { id, title } = options.isEnglish ? parseEnTitle(h2) : parseJaTitle(h2);
+  const { id, title } = isEnglish ? parseEnTitle(h2) : parseJaTitle(h2);
 
   const { students, href } = getPanelContents({
     body,
@@ -131,8 +134,8 @@ export const getPage = async (
   const count = body.querySelectorAll("h2").length;
   const panels = [...Array(count)].map((_, index) => {
     return isDeleted
-      ? getPanelCanDeleted(body, index)
-      : getPanel(body, index, { isEnglish });
+      ? getPanelCanDeleted({ body, index })
+      : getPanel({ body, index, isEnglish });
   });
   const nextAnchor = body.querySelector("li.navi_right > a");
   if (nextAnchor === null) {
