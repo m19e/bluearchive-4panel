@@ -1,10 +1,9 @@
 import { DOMParser } from "dom";
 import type { Element } from "dom";
 
-import { AOHARU_RECORD_URL, BASE_URL, EN_URL, JA_URL } from "/consts/url.ts";
-import { AOHARU_RECORD_PANELS, EN_PANELS, JA_PANELS } from "/consts/panel.ts";
+import { BASE_URL } from "/consts/url.ts";
 import { Panel } from "/types/panel.ts";
-import { getHtmlUtf8, sleep, writeJSON } from "/utils/tools.ts";
+import { getHtmlUtf8, sleep } from "/utils/tools.ts";
 
 const deletedURL =
   "https://bluearchive.wikiru.jp/?Twitter%E9%80%A3%E8%BC%89/%E3%81%B6%E3%82%8B%E3%83%BC%E3%81%82%E3%83%BC%E3%81%8B%E3%81%84%E3%81%B6%E3%81%A3%EF%BC%81/041%EF%BD%9E050%E8%A9%B1";
@@ -106,10 +105,7 @@ const getPanel = (
   const h2 = body.querySelector(`h2#content_1_${index}`)?.textContent!;
   const { id, title } = isEnglish ? parseEnTitle(h2) : parseJaTitle(h2);
 
-  const { students, href } = getPanelContents({
-    body,
-    index,
-  });
+  const { students, href } = getPanelContents({ body, index });
 
   return { id, title, students, href };
 };
