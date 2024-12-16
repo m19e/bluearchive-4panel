@@ -45,6 +45,12 @@
     "en": "Cherino",
     "school": "red_winter"
   },
+  "chiaki": {
+    "id": "chiaki",
+    "ja": "チアキ",
+    "en": "Chiaki",
+    "school": "gehenna"
+  },
   "chihiro": {
     "id": "chihiro",
     "ja": "チヒロ",
@@ -414,6 +420,12 @@
     "school": "trinity"
   },
   "saori": { "id": "saori", "ja": "サオリ", "en": "Saori", "school": "arius" },
+  "satsuki": {
+    "id": "satsuki",
+    "ja": "サツキ",
+    "en": "Satsuki",
+    "school": "gehenna"
+  },
   "saya": { "id": "saya", "ja": "サヤ", "en": "Saya", "school": "shanhaijing" },
   "sena": { "id": "sena", "ja": "セナ", "en": "Sena", "school": "gehenna" },
   "serika": {
