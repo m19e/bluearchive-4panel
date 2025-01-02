@@ -547,5 +547,11 @@
     "students": ["アカリ", "イズミ", "ジュンコ", "ハルナ"],
     "href": "https://twitter.com/blue_archivejp/status/1869578485813096939"
   },
-  { "id": "88", "title": "明日はきっといい日になる", "students": ["ユウカ"] }
+  { "id": "88", "title": "明日はきっといい日になる", "students": ["ユウカ"] },
+  {
+    "id": "89",
+    "title": "あなたが付けた思い出",
+    "students": ["ノア"],
+    "href": "https://twitter.com/blue_archivejp/status/1874666995947655258"
+  }
 ]
