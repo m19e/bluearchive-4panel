@@ -619,5 +619,11 @@
     "title": "次の1ページ",
     "students": ["アロナ", "プラナ"],
     "href": "https://twitter.com/blue_archivejp/status/1902555921311748140"
+  },
+  {
+    "id": "101",
+    "title": "逆転の一打",
+    "students": ["レイ"],
+    "href": "https://twitter.com/blue_archivejp/status/1905093327252505080"
   }
 ]
