@@ -1,303 +1,303 @@
 {
-  "arona": {
-    "id": "arona",
-    "ja": "アロナ",
-    "en": "Arona",
-    "club": "SCHALE",
-    "school": "schale"
-  },
-  "plana": {
-    "id": "plana",
-    "ja": "プラナ",
-    "en": "Plana",
-    "club": "SCHALE",
-    "school": "schale"
-  },
-  "sora": {
-    "id": "sora",
-    "ja": "ソラ",
-    "en": "Sora",
-    "club": "Angel 24",
-    "school": "other_students"
-  },
-  "president": {
-    "id": "president",
-    "ja": "連邦生徒会長",
-    "en": "President",
-    "club": "GSC",
-    "school": "general_student_council"
-  },
-  "rin": {
-    "id": "rin",
-    "ja": "リン",
-    "en": "Rin",
-    "club": "GSC",
-    "school": "general_student_council"
-  },
-  "momoka": {
-    "id": "momoka",
-    "ja": "モモカ",
-    "en": "Momoka",
-    "club": "GSC",
-    "school": "general_student_council"
-  },
-  "kaya": {
-    "id": "kaya",
-    "ja": "カヤ",
-    "en": "Kaya",
-    "club": "GSC",
-    "school": "general_student_council"
-  },
-  "ayumu": {
-    "id": "ayumu",
-    "ja": "アユム",
-    "en": "Ayumu",
-    "club": "GSC",
-    "school": "general_student_council"
-  },
-  "aoi": {
-    "id": "aoi",
-    "ja": "アオイ",
-    "en": "Aoi",
-    "club": "GSC",
-    "school": "general_student_council"
-  },
-  "haine": {
-    "id": "haine",
-    "ja": "ハイネ",
-    "en": "Haine",
-    "club": "GSC",
-    "school": "general_student_council"
-  },
-  "sumomo": {
-    "id": "sumomo",
-    "ja": "スモモ",
-    "en": "Sumomo",
-    "club": "GSC",
-    "school": "general_student_council"
-  },
-  "yume": {
-    "id": "yume",
-    "ja": "ユメ",
-    "en": "Yume",
-    "club": "Abydos Student Council",
-    "school": "abydos"
-  },
-  "satsuki": {
-    "id": "satsuki",
-    "ja": "サツキ",
-    "en": "Satsuki",
-    "club": "Pandemonium Society",
-    "school": "gehenna"
-  },
-  "chiaki": {
-    "id": "chiaki",
-    "ja": "チアキ",
-    "en": "Chiaki",
-    "club": "Pandemonium Society",
-    "school": "gehenna"
-  },
-  "erika": {
-    "id": "erika",
-    "ja": "エリカ",
-    "en": "Erika",
-    "club": null,
-    "school": "gehenna"
-  },
-  "rio": {
-    "id": "rio",
-    "ja": "リオ",
-    "en": "Rio",
-    "club": "Seminar",
-    "school": "millennium"
-  },
-  "rei": {
-    "id": "rei",
-    "ja": "レイ",
-    "en": "Rei",
-    "club": "Gym Training Dept.",
-    "school": "millennium"
-  },
-  "seia": {
-    "id": "seia",
-    "ja": "セイア",
-    "en": "Seia",
-    "club": "Tea Party",
-    "school": "trinity"
-  },
-  "niya": {
-    "id": "niya",
-    "ja": "ニヤ",
-    "en": "Niya",
-    "club": "Yin-Yang Club",
-    "school": "hyakkiyako"
-  },
-  "ayame": {
-    "id": "ayame",
-    "ja": "アヤメ",
-    "en": "Ayame",
-    "club": "Hyakkaryouran",
-    "school": "hyakkiyako"
-  },
-  "nagusa": {
-    "id": "nagusa",
-    "ja": "ナグサ",
-    "en": "Nagusa",
-    "club": "Hyakkaryouran",
-    "school": "hyakkiyako"
-  },
-  "arata": {
-    "id": "arata",
-    "ja": "アラタ",
-    "en": "Arata",
-    "club": "Street Ghost",
-    "school": "hyakkiyako"
-  },
-  "kokuriko": {
-    "id": "kokuriko",
-    "ja": "コクリコ",
-    "en": "Kokuriko",
-    "club": "Nature's Beauty",
-    "school": "hyakkiyako"
-  },
-  "shuro": {
-    "id": "shuro",
-    "ja": "シュロ",
-    "en": "Shuro",
-    "club": "Nature's Beauty",
-    "school": "hyakkiyako"
-  },
-  "kuzunoha": {
-    "id": "kuzunoha",
-    "ja": "クズノハ",
-    "en": "Kuzunoha",
-    "club": null,
-    "school": "hyakkiyako"
-  },
-  "kai": {
-    "id": "kai",
-    "ja": "カイ",
-    "en": "Kai",
+  "akemi": {
     "club": "Seven Prisoners",
-    "school": "shanhaijing"
-  },
-  "kaguya": {
-    "id": "kaguya",
-    "ja": "カグヤ",
-    "en": "Kaguya",
-    "club": "Peking Opera Club",
-    "school": "shanhaijing"
-  },
-  "takane": {
-    "id": "takane",
-    "ja": "タカネ",
-    "en": "Takane",
-    "club": "Publishing Dept.",
-    "school": "red_winter"
-  },
-  "yakumo": {
-    "id": "yakumo",
-    "ja": "ヤクモ",
-    "en": "Yakumo",
-    "club": "Publishing Dept.",
-    "school": "red_winter"
-  },
-  "konoka": {
-    "id": "konoka",
-    "ja": "コノカ",
-    "en": "Konoka",
-    "club": "Public Security Bureau",
-    "school": "valkyrie"
-  },
-  "yukino": {
-    "id": "yukino",
-    "ja": "ユキノ",
-    "en": "Yukino",
-    "club": "FOX Platoon",
-    "school": "srt"
-  },
-  "niko": {
-    "id": "niko",
-    "ja": "ニコ",
-    "en": "Niko",
-    "club": "FOX Platoon",
-    "school": "srt"
-  },
-  "kurumi": {
-    "id": "kurumi",
-    "ja": "クルミ",
-    "en": "Kurumi",
-    "club": "FOX Platoon",
-    "school": "srt"
-  },
-  "otogi": {
-    "id": "otogi",
-    "ja": "オトギ",
-    "en": "Otogi",
-    "club": "FOX Platoon",
-    "school": "srt"
-  },
-  "mai": {
-    "id": "mai",
-    "ja": "マイ",
-    "en": "Mai",
-    "club": "Kronos News Club",
-    "school": "kronos"
-  },
-  "shinon": {
-    "id": "shinon",
-    "ja": "シノン",
-    "en": "Shinon",
-    "club": "Kronos News Club",
-    "school": "kronos"
-  },
-  "hikari": {
-    "id": "hikari",
-    "ja": "ヒカリ",
-    "en": "Hikari",
-    "club": "Central Control Center",
-    "school": "highlander"
-  },
-  "nozomi": {
-    "id": "nozomi",
-    "ja": "ノゾミ",
-    "en": "Nozomi",
-    "club": "Central Control Center",
-    "school": "highlander"
-  },
-  "suou": {
-    "id": "suou",
-    "ja": "スオウ",
-    "en": "Suou",
-    "club": "Highlander Supervision Office",
-    "school": "highlander"
-  },
-  "tsumugi": {
-    "id": "tsumugi",
-    "ja": "ツムギ",
-    "en": "Tsumugi",
-    "club": null,
-    "school": "wild_hunt"
-  },
-  "rabu": {
-    "id": "rabu",
-    "ja": "ラブ",
-    "en": "Rabu",
-    "club": "Helmet Gang",
+    "en": "Akemi",
+    "id": "akemi",
+    "ja": "アケミ",
     "school": "other_students"
   },
   "akira": {
+    "club": "Seven Prisoners",
+    "en": "Akira",
     "id": "akira",
     "ja": "アキラ",
-    "en": "Akira",
-    "club": "Seven Prisoners",
     "school": "other_students"
   },
-  "akemi": {
-    "id": "akemi",
-    "ja": "アケミ",
-    "en": "Akemi",
+  "aoi": {
+    "club": "GSC",
+    "en": "Aoi",
+    "id": "aoi",
+    "ja": "アオイ",
+    "school": "general_student_council"
+  },
+  "arata": {
+    "club": "Street Ghost",
+    "en": "Arata",
+    "id": "arata",
+    "ja": "アラタ",
+    "school": "hyakkiyako"
+  },
+  "arona": {
+    "club": "SCHALE",
+    "en": "Arona",
+    "id": "arona",
+    "ja": "アロナ",
+    "school": "schale"
+  },
+  "ayame": {
+    "club": "Hyakkaryouran",
+    "en": "Ayame",
+    "id": "ayame",
+    "ja": "アヤメ",
+    "school": "hyakkiyako"
+  },
+  "ayumu": {
+    "club": "GSC",
+    "en": "Ayumu",
+    "id": "ayumu",
+    "ja": "アユム",
+    "school": "general_student_council"
+  },
+  "chiaki": {
+    "club": "Pandemonium Society",
+    "en": "Chiaki",
+    "id": "chiaki",
+    "ja": "チアキ",
+    "school": "gehenna"
+  },
+  "erika": {
+    "club": null,
+    "en": "Erika",
+    "id": "erika",
+    "ja": "エリカ",
+    "school": "gehenna"
+  },
+  "haine": {
+    "club": "GSC",
+    "en": "Haine",
+    "id": "haine",
+    "ja": "ハイネ",
+    "school": "general_student_council"
+  },
+  "hikari": {
+    "club": "Central Control Center",
+    "en": "Hikari",
+    "id": "hikari",
+    "ja": "ヒカリ",
+    "school": "highlander"
+  },
+  "kaguya": {
+    "club": "Peking Opera Club",
+    "en": "Kaguya",
+    "id": "kaguya",
+    "ja": "カグヤ",
+    "school": "shanhaijing"
+  },
+  "kai": {
     "club": "Seven Prisoners",
+    "en": "Kai",
+    "id": "kai",
+    "ja": "カイ",
+    "school": "shanhaijing"
+  },
+  "kaya": {
+    "club": "GSC",
+    "en": "Kaya",
+    "id": "kaya",
+    "ja": "カヤ",
+    "school": "general_student_council"
+  },
+  "kokuriko": {
+    "club": "Nature's Beauty",
+    "en": "Kokuriko",
+    "id": "kokuriko",
+    "ja": "コクリコ",
+    "school": "hyakkiyako"
+  },
+  "konoka": {
+    "club": "Public Security Bureau",
+    "en": "Konoka",
+    "id": "konoka",
+    "ja": "コノカ",
+    "school": "valkyrie"
+  },
+  "kurumi": {
+    "club": "FOX Platoon",
+    "en": "Kurumi",
+    "id": "kurumi",
+    "ja": "クルミ",
+    "school": "srt"
+  },
+  "kuzunoha": {
+    "club": null,
+    "en": "Kuzunoha",
+    "id": "kuzunoha",
+    "ja": "クズノハ",
+    "school": "hyakkiyako"
+  },
+  "mai": {
+    "club": "Kronos News Club",
+    "en": "Mai",
+    "id": "mai",
+    "ja": "マイ",
+    "school": "kronos"
+  },
+  "momoka": {
+    "club": "GSC",
+    "en": "Momoka",
+    "id": "momoka",
+    "ja": "モモカ",
+    "school": "general_student_council"
+  },
+  "nagusa": {
+    "club": "Hyakkaryouran",
+    "en": "Nagusa",
+    "id": "nagusa",
+    "ja": "ナグサ",
+    "school": "hyakkiyako"
+  },
+  "niko": {
+    "club": "FOX Platoon",
+    "en": "Niko",
+    "id": "niko",
+    "ja": "ニコ",
+    "school": "srt"
+  },
+  "niya": {
+    "club": "Yin-Yang Club",
+    "en": "Niya",
+    "id": "niya",
+    "ja": "ニヤ",
+    "school": "hyakkiyako"
+  },
+  "nozomi": {
+    "club": "Central Control Center",
+    "en": "Nozomi",
+    "id": "nozomi",
+    "ja": "ノゾミ",
+    "school": "highlander"
+  },
+  "otogi": {
+    "club": "FOX Platoon",
+    "en": "Otogi",
+    "id": "otogi",
+    "ja": "オトギ",
+    "school": "srt"
+  },
+  "plana": {
+    "club": "SCHALE",
+    "en": "Plana",
+    "id": "plana",
+    "ja": "プラナ",
+    "school": "schale"
+  },
+  "president": {
+    "club": "GSC",
+    "en": "President",
+    "id": "president",
+    "ja": "連邦生徒会長",
+    "school": "general_student_council"
+  },
+  "rabu": {
+    "club": "Helmet Gang",
+    "en": "Rabu",
+    "id": "rabu",
+    "ja": "ラブ",
     "school": "other_students"
+  },
+  "rei": {
+    "club": "Gym Training Dept.",
+    "en": "Rei",
+    "id": "rei",
+    "ja": "レイ",
+    "school": "millennium"
+  },
+  "rin": {
+    "club": "GSC",
+    "en": "Rin",
+    "id": "rin",
+    "ja": "リン",
+    "school": "general_student_council"
+  },
+  "rio": {
+    "club": "Seminar",
+    "en": "Rio",
+    "id": "rio",
+    "ja": "リオ",
+    "school": "millennium"
+  },
+  "satsuki": {
+    "club": "Pandemonium Society",
+    "en": "Satsuki",
+    "id": "satsuki",
+    "ja": "サツキ",
+    "school": "gehenna"
+  },
+  "seia": {
+    "club": "Tea Party",
+    "en": "Seia",
+    "id": "seia",
+    "ja": "セイア",
+    "school": "trinity"
+  },
+  "shinon": {
+    "club": "Kronos News Club",
+    "en": "Shinon",
+    "id": "shinon",
+    "ja": "シノン",
+    "school": "kronos"
+  },
+  "shuro": {
+    "club": "Nature's Beauty",
+    "en": "Shuro",
+    "id": "shuro",
+    "ja": "シュロ",
+    "school": "hyakkiyako"
+  },
+  "sora": {
+    "club": "Angel 24",
+    "en": "Sora",
+    "id": "sora",
+    "ja": "ソラ",
+    "school": "other_students"
+  },
+  "sumomo": {
+    "club": "GSC",
+    "en": "Sumomo",
+    "id": "sumomo",
+    "ja": "スモモ",
+    "school": "general_student_council"
+  },
+  "suou": {
+    "club": "Highlander Supervision Office",
+    "en": "Suou",
+    "id": "suou",
+    "ja": "スオウ",
+    "school": "highlander"
+  },
+  "takane": {
+    "club": "Publishing Dept.",
+    "en": "Takane",
+    "id": "takane",
+    "ja": "タカネ",
+    "school": "red_winter"
+  },
+  "tsumugi": {
+    "club": null,
+    "en": "Tsumugi",
+    "id": "tsumugi",
+    "ja": "ツムギ",
+    "school": "wild_hunt"
+  },
+  "yakumo": {
+    "club": "Publishing Dept.",
+    "en": "Yakumo",
+    "id": "yakumo",
+    "ja": "ヤクモ",
+    "school": "red_winter"
+  },
+  "yukino": {
+    "club": "FOX Platoon",
+    "en": "Yukino",
+    "id": "yukino",
+    "ja": "ユキノ",
+    "school": "srt"
+  },
+  "yume": {
+    "club": "Abydos Student Council",
+    "en": "Yume",
+    "id": "yume",
+    "ja": "ユメ",
+    "school": "abydos"
   }
 }
