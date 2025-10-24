@@ -15,3 +15,22 @@ export const writeJSON = async (filepath: string, input: any) => {
   const data = encoder.encode(JSON.stringify(input));
   await Deno.writeFile(filepath, data);
 };
+
+const sortKeysRecursively = (obj: any): any => {
+  if (Array.isArray(obj)) {
+    return obj.map(sortKeysRecursively);
+  } else if (obj !== null && typeof obj === "object") {
+    return Object.keys(obj)
+      .sort()
+      .reduce((acc, key) => {
+        acc[key] = sortKeysRecursively(obj[key]);
+        return acc;
+      }, {} as any);
+  }
+  return obj;
+};
+
+export const writeSortedJSON = async (filepath: string, input: any) => {
+  const sorted = sortKeysRecursively(input);
+  await writeJSON(filepath, sorted);
+};
