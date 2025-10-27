@@ -16,6 +16,7 @@ export const SCHOOLS = {
   arius: { id: "arius", ja: "アリウス", en: "Arius" },
   srt: { id: "srt", ja: "SRT", en: "SRT" },
   kronos: { id: "kronos", ja: "クロノス", en: "Kronos" },
+  // TODO フロント側も合わせて'other_students'に修正(fandom側に合わせる対応)
   others_students: {
     id: "others_students",
     ja: "不明",
