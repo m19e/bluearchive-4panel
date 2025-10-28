@@ -13,6 +13,12 @@
     "school": "gehenna"
   },
   "ako": { "en": "Ako", "id": "ako", "ja": "アコ", "school": "gehenna" },
+  "aoba": {
+    "en": "Aoba",
+    "id": "aoba",
+    "ja": "アオバ",
+    "school": "highlander"
+  },
   "arisu": {
     "en": "Arisu",
     "id": "arisu",
@@ -75,6 +81,7 @@
     "ja": "エイミ",
     "school": "millennium"
   },
+  "eri": { "en": "Eri", "id": "eri", "ja": "エリ", "school": "wildhunt" },
   "fubuki": {
     "en": "Fubuki",
     "id": "fubuki",
@@ -87,6 +94,7 @@
     "ja": "フウカ",
     "school": "gehenna"
   },
+  "fuyu": { "en": "Fuyu", "id": "fuyu", "ja": "フユ", "school": "wildhunt" },
   "hanae": {
     "en": "Hanae",
     "id": "hanae",
@@ -135,6 +143,12 @@
     "id": "hifumi",
     "ja": "ヒフミ",
     "school": "trinity"
+  },
+  "hikari": {
+    "en": "Hikari",
+    "id": "hikari",
+    "ja": "ヒカリ",
+    "school": "highlander"
   },
   "himari": {
     "en": "Himari",
@@ -211,6 +225,12 @@
     "id": "kanna",
     "ja": "カンナ",
     "school": "valkyrie"
+  },
+  "kanoe": {
+    "en": "Kanoe",
+    "id": "kanoe",
+    "ja": "カノエ",
+    "school": "wildhunt"
   },
   "karin": {
     "en": "Karin",
@@ -346,6 +366,7 @@
     "school": "arius"
   },
   "miyako": { "en": "Miyako", "id": "miyako", "ja": "ミヤコ", "school": "srt" },
+  "miyo": { "en": "Miyo", "id": "miyo", "ja": "ミヨ", "school": "wildhunt" },
   "miyu": { "en": "Miyu", "id": "miyu", "ja": "ミユ", "school": "srt" },
   "moe": { "en": "Moe", "id": "moe", "ja": "モエ", "school": "srt" },
   "momiji": {
@@ -372,8 +393,15 @@
     "ja": "ナギサ",
     "school": "trinity"
   },
+  "nagusa": {
+    "en": "Nagusa",
+    "id": "nagusa",
+    "ja": "ナグサ",
+    "school": "hyakkiyako"
+  },
   "natsu": { "en": "Natsu", "id": "natsu", "ja": "ナツ", "school": "trinity" },
   "neru": { "en": "Neru", "id": "neru", "ja": "ネル", "school": "millennium" },
+  "niya": { "en": "Niya", "id": "niya", "ja": "ニヤ", "school": "hyakkiyako" },
   "noa": { "en": "Noa", "id": "noa", "ja": "ノア", "school": "millennium" },
   "nodoka": {
     "en": "Nodoka",
@@ -387,12 +415,20 @@
     "ja": "ノノミ",
     "school": "abydos"
   },
+  "nozomi": {
+    "en": "Nozomi",
+    "id": "nozomi",
+    "ja": "ノゾミ",
+    "school": "highlander"
+  },
   "pina": {
     "en": "Pina",
     "id": "pina",
     "ja": "フィーナ",
     "school": "hyakkiyako"
   },
+  "rabu": { "en": "Rabu", "id": "rabu", "ja": "ラブ", "school": "trinity" },
+  "rei": { "en": "Rei", "id": "rei", "ja": "レイ", "school": "millennium" },
   "reijo": {
     "en": "Reijo",
     "id": "reijo",
@@ -411,6 +447,8 @@
     "ja": "レンゲ",
     "school": "hyakkiyako"
   },
+  "rio": { "en": "Rio", "id": "rio", "ja": "リオ", "school": "millennium" },
+  "ritsu": { "en": "Ritsu", "id": "ritsu", "ja": "リツ", "school": "wildhunt" },
   "rumi": { "en": "Rumi", "id": "rumi", "ja": "ルミ", "school": "shanhaijing" },
   "saki": { "en": "Saki", "id": "saki", "ja": "サキ", "school": "srt" },
   "sakurako": {
@@ -427,6 +465,7 @@
     "school": "gehenna"
   },
   "saya": { "en": "Saya", "id": "saya", "ja": "サヤ", "school": "shanhaijing" },
+  "seia": { "en": "Seia", "id": "seia", "ja": "セイア", "school": "trinity" },
   "sena": { "en": "Sena", "id": "sena", "ja": "セナ", "school": "gehenna" },
   "serika": {
     "en": "Serika",
