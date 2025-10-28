@@ -38,6 +38,13 @@ scripts:
       - net
       - write
 
+  sort:
+    desc: Sort character JSON files
+    cmd: sort.ts && deno fmt docs
+    allow:
+      - read
+      - write
+
   demo:
     desc: Debug new get-page process
     cmd: mods/getPage.ts && deno fmt docs
