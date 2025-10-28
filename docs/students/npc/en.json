@@ -48,12 +48,12 @@
     "ja": "アユム",
     "school": "general_student_council"
   },
-  "chiaki": {
-    "club": "Pandemonium Society",
-    "en": "Chiaki",
-    "id": "chiaki",
-    "ja": "チアキ",
-    "school": "gehenna"
+  "azami": {
+    "club": "Nature's Beauty",
+    "en": "Azami",
+    "id": "azami",
+    "ja": "アザミ",
+    "school": "hyakkiyako"
   },
   "erika": {
     "club": null,
@@ -68,13 +68,6 @@
     "id": "haine",
     "ja": "ハイネ",
     "school": "general_student_council"
-  },
-  "hikari": {
-    "club": "Central Control Center",
-    "en": "Hikari",
-    "id": "hikari",
-    "ja": "ヒカリ",
-    "school": "highlander"
   },
   "kaguya": {
     "club": "Peking Opera Club",
@@ -96,6 +89,13 @@
     "id": "kaya",
     "ja": "カヤ",
     "school": "general_student_council"
+  },
+  "key": {
+    "club": "Game Development Department",
+    "en": "Key",
+    "id": "key",
+    "ja": "ケイ",
+    "school": "millennium"
   },
   "kokuriko": {
     "club": "Nature's Beauty",
@@ -132,6 +132,13 @@
     "ja": "マイ",
     "school": "kronos"
   },
+  "mirai": {
+    "club": "Pseudosciences Department",
+    "en": "Mirai",
+    "id": "mirai",
+    "ja": "ミライ",
+    "school": "millennium"
+  },
   "momoka": {
     "club": "GSC",
     "en": "Momoka",
@@ -139,33 +146,12 @@
     "ja": "モモカ",
     "school": "general_student_council"
   },
-  "nagusa": {
-    "club": "Hyakkaryouran",
-    "en": "Nagusa",
-    "id": "nagusa",
-    "ja": "ナグサ",
-    "school": "hyakkiyako"
-  },
   "niko": {
     "club": "FOX Platoon",
     "en": "Niko",
     "id": "niko",
     "ja": "ニコ",
     "school": "srt"
-  },
-  "niya": {
-    "club": "Yin-Yang Club",
-    "en": "Niya",
-    "id": "niya",
-    "ja": "ニヤ",
-    "school": "hyakkiyako"
-  },
-  "nozomi": {
-    "club": "Central Control Center",
-    "en": "Nozomi",
-    "id": "nozomi",
-    "ja": "ノゾミ",
-    "school": "highlander"
   },
   "otogi": {
     "club": "FOX Platoon",
@@ -188,47 +174,12 @@
     "ja": "連邦生徒会長",
     "school": "general_student_council"
   },
-  "rabu": {
-    "club": "Helmet Gang",
-    "en": "Rabu",
-    "id": "rabu",
-    "ja": "ラブ",
-    "school": "other_students"
-  },
-  "rei": {
-    "club": "Gym Training Dept.",
-    "en": "Rei",
-    "id": "rei",
-    "ja": "レイ",
-    "school": "millennium"
-  },
   "rin": {
     "club": "GSC",
     "en": "Rin",
     "id": "rin",
     "ja": "リン",
     "school": "general_student_council"
-  },
-  "rio": {
-    "club": "Seminar",
-    "en": "Rio",
-    "id": "rio",
-    "ja": "リオ",
-    "school": "millennium"
-  },
-  "satsuki": {
-    "club": "Pandemonium Society",
-    "en": "Satsuki",
-    "id": "satsuki",
-    "ja": "サツキ",
-    "school": "gehenna"
-  },
-  "seia": {
-    "club": "Tea Party",
-    "en": "Seia",
-    "id": "seia",
-    "ja": "セイア",
-    "school": "trinity"
   },
   "shinon": {
     "club": "Kronos News Club",
@@ -243,6 +194,13 @@
     "id": "shuro",
     "ja": "シュロ",
     "school": "hyakkiyako"
+  },
+  "smiling_professor": {
+    "club": null,
+    "en": "Smiling Professor",
+    "id": "smiling_professor",
+    "ja": "ニヤニヤ教授",
+    "school": "other_students"
   },
   "sora": {
     "club": "Angel 24",

@@ -20,6 +20,13 @@
     "ja": "アケミ",
     "school": "other_students"
   },
+  "アザミ": {
+    "club": "Nature's Beauty",
+    "en": "Azami",
+    "id": "azami",
+    "ja": "アザミ",
+    "school": "hyakkiyako"
+  },
   "アヤメ": {
     "club": "Hyakkaryouran",
     "en": "Ayame",
@@ -97,6 +104,13 @@
     "ja": "クルミ",
     "school": "srt"
   },
+  "ケイ": {
+    "club": "Game Development Department",
+    "en": "Key",
+    "id": "key",
+    "ja": "ケイ",
+    "school": "millennium"
+  },
   "コクリコ": {
     "club": "Nature's Beauty",
     "en": "Kokuriko",
@@ -110,13 +124,6 @@
     "id": "konoka",
     "ja": "コノカ",
     "school": "valkyrie"
-  },
-  "サツキ": {
-    "club": "Pandemonium Society",
-    "en": "Satsuki",
-    "id": "satsuki",
-    "ja": "サツキ",
-    "school": "gehenna"
   },
   "シノン": {
     "club": "Kronos News Club",
@@ -146,13 +153,6 @@
     "ja": "スモモ",
     "school": "general_student_council"
   },
-  "セイア": {
-    "club": "Tea Party",
-    "en": "Seia",
-    "id": "seia",
-    "ja": "セイア",
-    "school": "trinity"
-  },
   "ソラ": {
     "club": "Angel 24",
     "en": "Sora",
@@ -167,26 +167,12 @@
     "ja": "タカネ",
     "school": "red_winter"
   },
-  "チアキ": {
-    "club": "Pandemonium Society",
-    "en": "Chiaki",
-    "id": "chiaki",
-    "ja": "チアキ",
-    "school": "gehenna"
-  },
   "ツムギ": {
     "club": null,
     "en": "Tsumugi",
     "id": "tsumugi",
     "ja": "ツムギ",
     "school": "wild_hunt"
-  },
-  "ナグサ": {
-    "club": "Hyakkaryouran",
-    "en": "Nagusa",
-    "id": "nagusa",
-    "ja": "ナグサ",
-    "school": "hyakkiyako"
   },
   "ニコ": {
     "club": "FOX Platoon",
@@ -195,19 +181,12 @@
     "ja": "ニコ",
     "school": "srt"
   },
-  "ニヤ": {
-    "club": "Yin-Yang Club",
-    "en": "Niya",
-    "id": "niya",
-    "ja": "ニヤ",
-    "school": "hyakkiyako"
-  },
-  "ノゾミ": {
-    "club": "Central Control Center",
-    "en": "Nozomi",
-    "id": "nozomi",
-    "ja": "ノゾミ",
-    "school": "highlander"
+  "ニヤニヤ教授": {
+    "club": null,
+    "en": "Smiling Professor",
+    "id": "smiling_professor",
+    "ja": "ニヤニヤ教授",
+    "school": "other_students"
   },
   "ハイネ": {
     "club": "GSC",
@@ -215,13 +194,6 @@
     "id": "haine",
     "ja": "ハイネ",
     "school": "general_student_council"
-  },
-  "ヒカリ": {
-    "club": "Central Control Center",
-    "en": "Hikari",
-    "id": "hikari",
-    "ja": "ヒカリ",
-    "school": "highlander"
   },
   "プラナ": {
     "club": "SCHALE",
@@ -236,6 +208,13 @@
     "id": "mai",
     "ja": "マイ",
     "school": "kronos"
+  },
+  "ミライ": {
+    "club": "Pseudosciences Department",
+    "en": "Mirai",
+    "id": "mirai",
+    "ja": "ミライ",
+    "school": "millennium"
   },
   "モモカ": {
     "club": "GSC",
@@ -265,33 +244,12 @@
     "ja": "ユメ",
     "school": "abydos"
   },
-  "ラブ": {
-    "club": "Helmet Gang",
-    "en": "Rabu",
-    "id": "rabu",
-    "ja": "ラブ",
-    "school": "other_students"
-  },
-  "リオ": {
-    "club": "Seminar",
-    "en": "Rio",
-    "id": "rio",
-    "ja": "リオ",
-    "school": "millennium"
-  },
   "リン": {
     "club": "GSC",
     "en": "Rin",
     "id": "rin",
     "ja": "リン",
     "school": "general_student_council"
-  },
-  "レイ": {
-    "club": "Gym Training Dept.",
-    "en": "Rei",
-    "id": "rei",
-    "ja": "レイ",
-    "school": "millennium"
   },
   "連邦生徒会長": {
     "club": "GSC",
