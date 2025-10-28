@@ -81,7 +81,7 @@
     "ja": "エイミ",
     "school": "millennium"
   },
-  "eri": { "en": "Eri", "id": "eri", "ja": "エリ", "school": "wildhunt" },
+  "eri": { "en": "Eri", "id": "eri", "ja": "エリ", "school": "wild_hunt" },
   "fubuki": {
     "en": "Fubuki",
     "id": "fubuki",
@@ -94,7 +94,7 @@
     "ja": "フウカ",
     "school": "gehenna"
   },
-  "fuyu": { "en": "Fuyu", "id": "fuyu", "ja": "フユ", "school": "wildhunt" },
+  "fuyu": { "en": "Fuyu", "id": "fuyu", "ja": "フユ", "school": "wild_hunt" },
   "hanae": {
     "en": "Hanae",
     "id": "hanae",
@@ -230,7 +230,7 @@
     "en": "Kanoe",
     "id": "kanoe",
     "ja": "カノエ",
-    "school": "wildhunt"
+    "school": "wild_hunt"
   },
   "karin": {
     "en": "Karin",
@@ -366,7 +366,7 @@
     "school": "arius"
   },
   "miyako": { "en": "Miyako", "id": "miyako", "ja": "ミヤコ", "school": "srt" },
-  "miyo": { "en": "Miyo", "id": "miyo", "ja": "ミヨ", "school": "wildhunt" },
+  "miyo": { "en": "Miyo", "id": "miyo", "ja": "ミヨ", "school": "wild_hunt" },
   "miyu": { "en": "Miyu", "id": "miyu", "ja": "ミユ", "school": "srt" },
   "moe": { "en": "Moe", "id": "moe", "ja": "モエ", "school": "srt" },
   "momiji": {
@@ -448,7 +448,12 @@
     "school": "hyakkiyako"
   },
   "rio": { "en": "Rio", "id": "rio", "ja": "リオ", "school": "millennium" },
-  "ritsu": { "en": "Ritsu", "id": "ritsu", "ja": "リツ", "school": "wildhunt" },
+  "ritsu": {
+    "en": "Ritsu",
+    "id": "ritsu",
+    "ja": "リツ",
+    "school": "wild_hunt"
+  },
   "rumi": { "en": "Rumi", "id": "rumi", "ja": "ルミ", "school": "shanhaijing" },
   "saki": { "en": "Saki", "id": "saki", "ja": "サキ", "school": "srt" },
   "sakurako": {
