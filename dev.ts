@@ -10,7 +10,7 @@ import {
   SchoolID,
   StudentData,
 } from "/types/panel.ts";
-import { getHtmlUtf8, sleep, writeJSON } from "/utils/tools.ts";
+import { getHtmlUtf8, sleep, writeSortedJSON } from "/utils/tools.ts";
 import { convertRomanToKana } from "/utils/romanToKana.ts";
 
 const getStudents = (
@@ -199,11 +199,12 @@ const checkShouldUpdate = (data1: Data, data2: Data) => {
   return Object.keys(data1).length !== Object.keys(data2).length;
 };
 
+// TODO sort json
 const playable = await getCharacters();
 if (checkShouldUpdate(playable.ja, JA_PLAYABLE)) {
   console.log("update: PLAYABLE");
-  await writeJSON("docs/students/playable/ja.json", playable.ja);
-  await writeJSON("docs/students/playable/en.json", playable.en);
+  await writeSortedJSON("docs/students/playable/ja.json", playable.ja);
+  await writeSortedJSON("docs/students/playable/en.json", playable.en);
 } else {
   console.log("skip: same playable count");
 }
@@ -211,8 +212,8 @@ if (checkShouldUpdate(playable.ja, JA_PLAYABLE)) {
 const npcs = await getNPCsFromFandom();
 if (checkShouldUpdate(npcs.ja, JA_NPC)) {
   console.log("update: NPC");
-  await writeJSON("docs/students/npc/ja.json", npcs.ja);
-  await writeJSON("docs/students/npc/en.json", npcs.en);
+  await writeSortedJSON("docs/students/npc/ja.json", npcs.ja);
+  await writeSortedJSON("docs/students/npc/en.json", npcs.en);
 } else {
   console.log("skip: same npc count");
 }
