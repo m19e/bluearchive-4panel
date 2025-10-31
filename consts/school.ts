@@ -1,3 +1,4 @@
+// TODO add 'highlander' 'wild_hunt'
 export const SCHOOLS = {
   kivotos: { id: "kivotos", ja: "キヴォトス", en: "Kivotos" },
   prime_student_council: {
