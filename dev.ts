@@ -173,6 +173,7 @@ const getNPCsFromFandom = async () => {
     students = [...students, getStudentFromNode(node, currentSchool)];
   });
 
+  // TODO update non-student filter
   const filtered = students.filter(({ en, club, school }) =>
     school !== "other_characters" &&
     school !== "other_non-student_characters" && !(rejectEn[en])
