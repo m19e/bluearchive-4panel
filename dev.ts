@@ -109,6 +109,7 @@ const terror: FandomStudentData = {
   },
 };
 
+// TODO reject 'hoshino terror'
 const rejectEn: Record<string, string> = {
   "Kanna": "Kanna",
   "Nao": "Nao",
