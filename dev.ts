@@ -41,6 +41,7 @@ const exceptionIds: Record<string, string> = {
   "Hatsune Miku": "hatsune_miku",
 };
 
+// FIXME rename correctly
 const toID = (en: string) => en.split(" ").join("_").toLowerCase();
 
 const convertSchoolToID = (school: string) => toID(school) as SchoolID;
