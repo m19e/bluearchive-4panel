@@ -29,6 +29,8 @@ const exceptions: Record<string, string> = {
   "Pina": "フィーナ",
   "President": "連邦生徒会長",
   "Shiroko＊Terror": "シロコ＊テラー",
+  "Smiling Professor": "ニヤニヤ教授",
+  "Key": "ケイ",
 };
 
 const getStudentKanaFromRoman = (roman: string) => {
