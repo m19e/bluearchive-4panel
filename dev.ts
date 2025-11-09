@@ -183,7 +183,8 @@ const getNPCsFromFandom = async () => {
   // TODO update non-student filter
   const filtered = students.filter(({ en, club, school }) =>
     school !== "other_characters" &&
-    school !== "other_non-student_characters" && !(rejectEn[en])
+    school !== "other_non-student_characters" &&
+    school !== "non-student_npcs" && !(rejectEn[en])
   );
 
   const en = filtered.reduce(
