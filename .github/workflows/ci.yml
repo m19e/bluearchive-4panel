@@ -6,7 +6,7 @@ jobs:
   test:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@master
+      - uses: actions/checkout@v3
       - uses: denoland/setup-deno@v2
       - uses: jurassiscripts/setup-velociraptor@v2
       - name: Create env file
