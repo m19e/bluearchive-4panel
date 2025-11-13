@@ -127,6 +127,7 @@ const rejectEn: Record<string, string> = {
   "Master Shiba": "柴大将",
   "Barbara": "バルバラ",
   "Owner of Suzume": "スズメ亭の女将",
+  "Hoshino Terror": "ホシノ＊テラー",
 };
 
 const getSchoolFromNode = (node: Node) => {
