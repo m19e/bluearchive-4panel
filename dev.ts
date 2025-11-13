@@ -106,7 +106,7 @@ const terror: FandomStudentData = {
     "club": "Angel 24",
     "school": "other_students",
   },
-  "Plana": {
+  Plana: {
     id: "plana",
     ja: "プラナ",
     en: "Plana",
