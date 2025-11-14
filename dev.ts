@@ -99,12 +99,12 @@ const getCharacters = async () => {
 
 // TODO trim quotes
 const terror: FandomStudentData = {
-  "Sora": {
-    "id": "sora",
-    "ja": "ソラ",
-    "en": "Sora",
-    "club": "Angel 24",
-    "school": "other_students",
+  Sora: {
+    id: "sora",
+    ja: "ソラ",
+    en: "Sora",
+    club: "Angel 24",
+    school: "other_students",
   },
   Plana: {
     id: "plana",
