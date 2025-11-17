@@ -66,13 +66,23 @@ const getCharacters = async () => {
     const name = tbody.querySelector(
       `tr:nth-child(${n}) > td:nth-child(2)`,
     )!.textContent;
-    const school = tbody.querySelector(
+    const sch = tbody.querySelector(
       `tr:nth-child(${n}) > td:nth-child(4)`,
     )!.textContent;
+
+    // unify wild_hunt phrase
+    const school = sch === "Wildhunt" ? "Wild Hunt" : sch;
+
     return { name, school };
   });
 
-  const en = students.reduce(
+  // filter tokiwadai and sakugawa students
+  const filtered = students.filter(({ school }) => {
+    const id = toID(school);
+    return id !== "tokiwadai" && id !== "sakugawa";
+  });
+
+  const en = filtered.reduce(
     (prev, { name, school }) => {
       const en = anotherWear[name] ? name : name.split(" (")[0];
       const id = exceptionIds[name] ?? en.toLowerCase();
