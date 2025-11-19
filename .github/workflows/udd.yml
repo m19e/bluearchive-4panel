@@ -6,6 +6,7 @@ on:
   # schedule: # disable in template
   #   - cron: "0 0 * * *"
 
+# TODO specify actions/checkout version (fix checkout bug)
 jobs:
   udd:
     runs-on: ubuntu-latest
