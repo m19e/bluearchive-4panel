@@ -5,6 +5,7 @@ on:
   schedule:
     - cron: "0 11 * * *"
 
+# TODO specify actions/checkout version (fix checkout bug)
 jobs:
   update:
     runs-on: ubuntu-latest
