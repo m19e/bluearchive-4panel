@@ -2,6 +2,7 @@ name: ci
 
 on: [push, pull_request]
 
+# TODO specify actions/checkout version (fix checkout bug)
 jobs:
   test:
     runs-on: ubuntu-latest
