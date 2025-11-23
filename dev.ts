@@ -107,7 +107,6 @@ const getCharacters = async () => {
   return { ja, en };
 };
 
-// TODO trim quotes
 const terror: FandomStudentData = {
   Sora: {
     id: "sora",
