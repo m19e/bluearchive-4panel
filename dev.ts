@@ -13,11 +13,6 @@ import {
 import { getHtmlUtf8, sleep, writeSortedJSON } from "/utils/tools.ts";
 import { convertRomanToKana } from "/utils/romanToKana.ts";
 
-// TODO remove unused
-const getStudents = (
-  panels: Panel[],
-) => [...new Set(panels.map((p) => p.students).flat())];
-
 const anotherWear: Record<string, string> = {
   "Shun (Kid)": "シュン（幼女）",
 };
