@@ -213,7 +213,6 @@ const checkShouldUpdate = (data1: Data, data2: Data) => {
   return Object.keys(data1).length !== Object.keys(data2).length;
 };
 
-// TODO sort json
 const playable = await getCharacters();
 if (checkShouldUpdate(playable.ja, JA_PLAYABLE)) {
   console.log("update: PLAYABLE");
