@@ -17,7 +17,6 @@ const anotherWear: Record<string, string> = {
   "Shun (Kid)": "シュン（幼女）",
 };
 
-// TODO 連邦生徒会長とカイザープレジデントがid衝突している
 // TODO fix 'Sミィンg Pロフェッソr'
 // TODO fix 'ケy'
 const exceptions: Record<string, string> = {
