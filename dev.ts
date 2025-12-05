@@ -18,7 +18,6 @@ const anotherWear: Record<string, string> = {
 };
 
 // TODO fix 'Sミィンg Pロフェッソr'
-// TODO fix 'ケy'
 const exceptions: Record<string, string> = {
   "Hatsune Miku": "初音ミク",
   "Kanna": "カンナ",
