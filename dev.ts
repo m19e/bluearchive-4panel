@@ -17,7 +17,6 @@ const anotherWear: Record<string, string> = {
   "Shun (Kid)": "シュン（幼女）",
 };
 
-// TODO fix 'Sミィンg Pロフェッソr'
 const exceptions: Record<string, string> = {
   "Hatsune Miku": "初音ミク",
   "Kanna": "カンナ",
