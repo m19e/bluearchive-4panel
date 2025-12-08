@@ -6,7 +6,6 @@ import { JA_NPC, JA_PLAYABLE } from "/consts/student.ts";
 import {
   FandomStudent,
   FandomStudentData,
-  Panel,
   SchoolID,
   StudentData,
 } from "/types/panel.ts";
