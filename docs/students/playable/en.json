@@ -539,6 +539,12 @@
     "ja": "スズミ",
     "school": "trinity"
   },
+  "takane": {
+    "en": "Takane",
+    "id": "takane",
+    "ja": "タカネ",
+    "school": "red_winter"
+  },
   "toki": { "en": "Toki", "id": "toki", "ja": "トキ", "school": "millennium" },
   "tomoe": {
     "en": "Tomoe",
