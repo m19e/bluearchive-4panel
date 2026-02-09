@@ -1385,5 +1385,17 @@
     "title": "Beware the Rainy Night",
     "students": ["カノエ", "レナ", "エリ"],
     "href": "https://twitter.com/en_bluearchive/status/2014624949768684005"
+  },
+  {
+    "id": "223",
+    "title": "Is It a Virus?",
+    "students": ["ヒヨリ", "ミサキ", "アツコ"],
+    "href": "https://twitter.com/en_bluearchive/status/2017160923069464899"
+  },
+  {
+    "id": "224",
+    "title": "All that Matters",
+    "students": ["ミサキ", "アツコ", "ヒヨリ", "サオリ"],
+    "href": "https://twitter.com/en_bluearchive/status/2019698041234845953"
   }
 ]
