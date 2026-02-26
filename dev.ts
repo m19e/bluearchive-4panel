@@ -16,6 +16,7 @@ const anotherWear: Record<string, string> = {
   "Shun (Kid)": "シュン（幼女）",
 };
 
+// TODO ケイちゃん例外削除してみる
 const exceptions: Record<string, string> = {
   "Hatsune Miku": "初音ミク",
   "Kanna": "カンナ",
@@ -24,7 +25,7 @@ const exceptions: Record<string, string> = {
   "President": "連邦生徒会長",
   "Shiroko＊Terror": "シロコ＊テラー",
   "Smiling Professor": "ニヤニヤ教授",
-  "Key": "ケイ",
+  // "Key": "ケイ",
 };
 
 const getStudentKanaFromRoman = (roman: string) => {
