@@ -230,6 +230,13 @@
     "ja": "リン",
     "school": "general_student_council"
   },
+  "レナ": {
+    "club": "Occult Research Society",
+    "en": "Rena",
+    "id": "rena",
+    "ja": "レナ",
+    "school": "wild_hunt"
+  },
   "連邦生徒会長": {
     "club": "GSC",
     "en": "President",

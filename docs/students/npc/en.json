@@ -167,6 +167,13 @@
     "ja": "連邦生徒会長",
     "school": "general_student_council"
   },
+  "rena": {
+    "club": "Occult Research Society",
+    "en": "Rena",
+    "id": "rena",
+    "ja": "レナ",
+    "school": "wild_hunt"
+  },
   "rin": {
     "club": "GSC",
     "en": "Rin",
