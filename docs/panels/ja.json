@@ -1521,6 +1521,18 @@
     "href": "https://twitter.com/blue_archivejp/status/2001865345477587158"
   },
   {
+    "id": "252",
+    "title": "「少女」忍法帖ミチルっち",
+    "students": ["ミチル", "ツクヨ", "イズナ"],
+    "href": "https://twitter.com/blue_archivejp/status/2004402053104521284"
+  },
+  {
+    "id": "253",
+    "title": "新・忍者定食発売！",
+    "students": ["ミチル", "ツクヨ", "イズナ", "ハルナ"],
+    "href": "https://twitter.com/blue_archivejp/status/2006938714501685514"
+  },
+  {
     "id": "254",
     "title": "キキちゃんです",
     "students": ["ココナ", "キサキ", "ルミ"],
@@ -1531,5 +1543,86 @@
     "title": "なでなで",
     "students": ["ユウカ", "リオ", "ヒマリ"],
     "href": "https://twitter.com/blue_archivejp/status/2012012014823219513"
+  },
+  {
+    "id": "256",
+    "title": "定員オーバー",
+    "students": [
+      "ヒマリ",
+      "モモイ",
+      "ミドリ",
+      "トキ",
+      "アリス",
+      "ケイ",
+      "リオ",
+      "エイミ"
+    ],
+    "href": "https://twitter.com/blue_archivejp/status/2014548913261584863"
+  },
+  {
+    "id": "257",
+    "title": "2Pカラーです！",
+    "students": [
+      "アリス",
+      "ケイ",
+      "ミドリ",
+      "モモイ",
+      "トキ",
+      "エイミ",
+      "ユズ",
+      "リオ",
+      "ヒマリ"
+    ],
+    "href": "https://twitter.com/blue_archivejp/status/2017085438419489286"
+  },
+  {
+    "id": "258",
+    "title": "射撃の腕",
+    "students": ["トキ", "リオ", "エイミ", "ヒマリ"],
+    "href": "https://twitter.com/blue_archivejp/status/2019622283988599233"
+  },
+  {
+    "id": "259",
+    "title": "スーツの性能",
+    "students": ["ユズ", "エイミ", "ミドリ"],
+    "href": "https://twitter.com/blue_archivejp/status/2022158961722691906"
+  },
+  {
+    "id": "260",
+    "title": "ここが私の",
+    "students": ["ケイ", "アリス", "ユズ", "モモイ", "ミドリ"],
+    "href": "https://twitter.com/blue_archivejp/status/2024695728610955549"
+  },
+  {
+    "id": "261",
+    "title": "遊び",
+    "students": ["プラナ", "アロナ"],
+    "href": "https://twitter.com/blue_archivejp/status/2027232491317399976"
+  },
+  {
+    "id": "262",
+    "title": "大切な後輩",
+    "students": ["コユキ", "ユウカ", "ノア"],
+    "href": "https://twitter.com/blue_archivejp/status/2029769209061023926"
+  },
+  {
+    "id": "263",
+    "title": "ユウカの寝相",
+    "students": [
+      "ノア",
+      "チヒロ",
+      "ハレ",
+      "マキ",
+      "コタマ",
+      "ユウカ",
+      "コユキ"
+    ],
+    "href": "https://twitter.com/blue_archivejp/status/2032305871783673899"
+  },
+  {
+    "id": "264",
+    "title": "運気アップ",
+    "students": ["コノカ", "カンナ"],
+    "href": "https://twitter.com/blue_archivejp/status/2034842553720480102"
   }
 ]
