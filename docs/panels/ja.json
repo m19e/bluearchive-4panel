@@ -1672,5 +1672,20 @@
     "title": "映像資料",
     "students": ["レイ", "ウタハ", "ヒビキ", "コトリ"],
     "href": "https://twitter.com/blue_archivejp/status/2055136223153487890"
+  },
+  {
+    "id": "273",
+    "title": "噂のアルバイト",
+    "students": [
+      "エリカ",
+      "キララ",
+      "ホシノ",
+      "シロコ",
+      "アル",
+      "ハルカ",
+      "ムツキ",
+      "カヨコ"
+    ],
+    "href": "https://twitter.com/blue_archivejp/status/2057688075485196317"
   }
 ]
